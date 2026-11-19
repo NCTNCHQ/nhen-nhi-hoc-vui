@@ -1551,8 +1551,8 @@ function nextGift() { for (const t of [...myThemes(), ...THEME_KEYS]) { const u 
 
 // ---------- Tốc độ đọc ----------
 // ── PHIÊN BẢN: mỗi lần thêm nội dung mới thì TĂNG số này (vd 2.0.0 → 2.1.0) và ghi điều mới vào APP_NOTES ──
-const APP_VER = '2.7.6';
-const APP_NOTES = ["Câu hỏi mở khóa / thoát game là phép tính thường dưới 100 (vd 37 + 48, 85 − 29, 7 × 9)", "Máy tính bảng: bàn phím không tự bật lên ở ô nhập tên và tự đóng khi sang màn hình khác", "Giọng đọc qua mạng ổn định hơn (tải trước, tự thử lại, báo khi mạng yếu); bảng ℹ️ cho biết đang dùng giọng nào", "Sửa lỗi: đang khóa màn hình vẫn bấm Cập nhật ngay được", "Máy không có giọng tiếng Việt (vd máy tính bảng Huawei) thì tự đọc bằng giọng qua mạng","Máy tính bảng: nút 🔒 Khóa màn hình (toàn màn hình, nằm ngang), mở khóa bằng câu hỏi dành cho bố mẹ","Đổi phông chữ: chữ a, g viết kiểu chữ in như sách giáo khoa Việt Nam (dùng được cả khi không có mạng)","Có thêm bộ chạy trên máy tính bảng (mở bằng trình duyệt), sao lưu dữ liệu ra file","Tự báo khi có phiên bản mới, bấm một nút là cập nhật", "Có nút ⬅️ Trở về ngay trong lúc làm bài","Chọn lớp → chọn môn → bản đồ bài học, có nút Trở về", "Bài chưa học hiện mờ, phải học xong bài trước (và đạt bài kiểm tra từ 8 điểm) mới mở bài sau", "Bản đồ gom bài thành từng hàng theo cụm ôn tập / chủ đề", "Bộ sưu tập Thủy cung, Công viên khủng long, Khu vườn, Lâu đài: mỗi bộ 32 hình","Toán 5 – thêm Chủ đề 5: Một số hình phẳng, chu vi và diện tích (bài 25–29) và bài kiểm tra chủ đề 5","Toán 5 – thêm Chủ đề 4: Các phép tính với số thập phân (bài 19–24) và bài kiểm tra chủ đề 4","Toán 5 – thêm Chủ đề 3: Một số đơn vị đo diện tích (bài 15–18) và bài kiểm tra chủ đề 3","Lớp 5: hình vẽ mới dễ thương, chữ và ô nhập to hơn, không còn chữ bị hình che","Mở Lớp 5 – Toán 5: Chủ đề 1 (Ôn tập và bổ sung) và Chủ đề 2 (Số thập phân), bài 1–14", "Bàn phím số, ô phân số, hình minh họa và gợi ý cách làm", "Bài kiểm tra cuối mỗi chủ đề (10 câu, đạt từ 8 điểm)","Đổi tên thành Nhện Nhí Học Vui (Mầm non đến Lớp 5)", "3 mức tốc độ mới: Chậm, Vừa, Nhanh", "Thêm mục Thông tin tác giả và Cập nhật ứng dụng", "Tự sao lưu dữ liệu học của các bé"];
+const APP_VER = '2.7.7';
+const APP_NOTES = ["Máy tính bảng: cập nhật xong, thoát ra mở lại vẫn giữ bản mới", "Câu hỏi mở khóa / thoát game là phép tính thường dưới 100 (vd 37 + 48, 85 − 29, 7 × 9)", "Máy tính bảng: bàn phím không tự bật lên ở ô nhập tên và tự đóng khi sang màn hình khác", "Giọng đọc qua mạng ổn định hơn (tải trước, tự thử lại, báo khi mạng yếu); bảng ℹ️ cho biết đang dùng giọng nào", "Sửa lỗi: đang khóa màn hình vẫn bấm Cập nhật ngay được", "Máy không có giọng tiếng Việt (vd máy tính bảng Huawei) thì tự đọc bằng giọng qua mạng","Máy tính bảng: nút 🔒 Khóa màn hình (toàn màn hình, nằm ngang), mở khóa bằng câu hỏi dành cho bố mẹ","Đổi phông chữ: chữ a, g viết kiểu chữ in như sách giáo khoa Việt Nam (dùng được cả khi không có mạng)","Có thêm bộ chạy trên máy tính bảng (mở bằng trình duyệt), sao lưu dữ liệu ra file","Tự báo khi có phiên bản mới, bấm một nút là cập nhật", "Có nút ⬅️ Trở về ngay trong lúc làm bài","Chọn lớp → chọn môn → bản đồ bài học, có nút Trở về", "Bài chưa học hiện mờ, phải học xong bài trước (và đạt bài kiểm tra từ 8 điểm) mới mở bài sau", "Bản đồ gom bài thành từng hàng theo cụm ôn tập / chủ đề", "Bộ sưu tập Thủy cung, Công viên khủng long, Khu vườn, Lâu đài: mỗi bộ 32 hình","Toán 5 – thêm Chủ đề 5: Một số hình phẳng, chu vi và diện tích (bài 25–29) và bài kiểm tra chủ đề 5","Toán 5 – thêm Chủ đề 4: Các phép tính với số thập phân (bài 19–24) và bài kiểm tra chủ đề 4","Toán 5 – thêm Chủ đề 3: Một số đơn vị đo diện tích (bài 15–18) và bài kiểm tra chủ đề 3","Lớp 5: hình vẽ mới dễ thương, chữ và ô nhập to hơn, không còn chữ bị hình che","Mở Lớp 5 – Toán 5: Chủ đề 1 (Ôn tập và bổ sung) và Chủ đề 2 (Số thập phân), bài 1–14", "Bàn phím số, ô phân số, hình minh họa và gợi ý cách làm", "Bài kiểm tra cuối mỗi chủ đề (10 câu, đạt từ 8 điểm)","Đổi tên thành Nhện Nhí Học Vui (Mầm non đến Lớp 5)", "3 mức tốc độ mới: Chậm, Vừa, Nhanh", "Thêm mục Thông tin tác giả và Cập nhật ứng dụng", "Tự sao lưu dữ liệu học của các bé"];
 const SPEEDS = { cham: { ic: '🐢', n: 'Chậm', rate: 1.1, k: 1 }, vua: { ic: '🚶', n: 'Vừa', rate: 1.35, k: .7 }, nhanh: { ic: '🐇', n: 'Nhanh', rate: 1.6, k: .5 } };
 const SPD = () => SPEEDS[(G.p && G.p.speed) || 'vua'] || SPEEDS.vua;
 const D = ms => Math.round(ms * SPD().k);
@@ -2474,6 +2474,7 @@ const UPD = (() => {
     const a = v.split('.').map(Number), b = APP_VER.split('.').map(Number);
     let newer = false;
     for (let i = 0; i < Math.max(a.length, b.length); i++) if ((a[i] || 0) !== (b[i] || 0)) { newer = (a[i] || 0) > (b[i] || 0); break; }
+    try { localStorage.setItem('nn_latest', v); } catch (e) { }   // nhớ bản mới nhất trên mạng
     return { ok: true, ver: v, newer, notes };
   }).catch(() => ({ ok: false, err: 'không kết nối được mạng' }));
   return {
@@ -2481,11 +2482,31 @@ const UPD = (() => {
     check() { return api ? call('check').then(r => (this.info = r)) : web ? webCheck().then(r => (this.info = r)) : Promise.reject(new Error('noapi')); },
     backup(why) { if (web) { DB.save(); return Promise.resolve({ ok: true }); } if (!api) return Promise.resolve(null); DB.save(); return call('backup?why=' + why, localStorage.getItem(DB.k) || '{}').catch(() => null); },
     update() { return web ? Promise.resolve({ ok: true, ver: (this.info || {}).ver || APP_VER }) : call('update'); },
-    reload() { window.LEAVE_OK = true; if (web) location.replace(location.pathname + '?v=' + encodeURIComponent((this.info || {}).ver || Date.now())); else location.reload(); },
+    reload() {
+      window.LEAVE_OK = true; if (!web) return location.reload();
+      const go = () => location.replace(location.pathname + '?v=' + encodeURIComponent((this.info || {}).ver || Date.now()));
+      // làm mới luôn bản lưu của địa chỉ gốc, để lần sau mở bằng biểu tượng con nhện cũng ra bản mới
+      fetch(location.pathname, { cache: 'reload' }).then(go, go); setTimeout(go, 4000);
+    },
     list() { return call('backups'); },
     restore(f) { return call('restore?f=' + encodeURIComponent(f)); },
   };
 })();
+// Bộ máy tính bảng: trình duyệt có thể còn giữ bản cũ của địa chỉ gốc (tối đa ~10 phút).
+// Nếu đã biết có bản mới hơn → tự chuyển sang bản mới (mỗi phiên chỉ thử 1 lần để không lặp).
+if (UPD.web) {
+  const vNew = (a, b) => { a = String(a).split('.').map(Number); b = String(b).split('.').map(Number); for (let i = 0; i < Math.max(a.length, b.length); i++) if ((a[i] || 0) !== (b[i] || 0)) return (a[i] || 0) > (b[i] || 0); return false; };
+  let L = null; try { L = localStorage.getItem('nn_latest'); } catch (e) { }
+  let tried = null; try { tried = sessionStorage.getItem('nn_tried'); } catch (e) { }
+  if (L && vNew(L, APP_VER) && tried !== L) {
+    try { sessionStorage.setItem('nn_tried', L); } catch (e) { }
+    window.LEAVE_OK = true;
+    const go = () => location.replace(location.pathname + '?v=' + encodeURIComponent(L));
+    fetch(location.pathname, { cache: 'reload' }).then(go, go);
+  } else if (/[?&]v=/.test(location.search)) {
+    fetch(location.pathname, { cache: 'reload' }).catch(() => { });   // đang chạy bản mới → làm mới bản lưu của địa chỉ gốc
+  }
+}
 // Bộ máy tính bảng: xin trình duyệt giữ dữ liệu lâu dài, mở toàn màn hình khi bé bắt đầu chơi
 if (UPD.web && navigator.storage && navigator.storage.persist) navigator.storage.persist().catch(() => { });
 function goFull() {
