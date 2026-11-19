@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="google" content="notranslate">
+<meta name="referrer" content="no-referrer"><!-- cần cho giọng đọc dự phòng qua mạng -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Nhện Nhí Học Vui – Mầm non đến Lớp 5</title>
 <meta name="author" content="Nguyễn Công Trung (congtrung127@gmail.com)">
@@ -1550,8 +1551,8 @@ function nextGift() { for (const t of [...myThemes(), ...THEME_KEYS]) { const u 
 
 // ---------- Tốc độ đọc ----------
 // ── PHIÊN BẢN: mỗi lần thêm nội dung mới thì TĂNG số này (vd 2.0.0 → 2.1.0) và ghi điều mới vào APP_NOTES ──
-const APP_VER = '2.7.0';
-const APP_NOTES = ["Máy tính bảng: nút 🔒 Khóa màn hình (toàn màn hình, nằm ngang), mở khóa bằng câu hỏi dành cho bố mẹ","Đổi phông chữ: chữ a, g viết kiểu chữ in như sách giáo khoa Việt Nam (dùng được cả khi không có mạng)","Có thêm bộ chạy trên máy tính bảng (mở bằng trình duyệt), sao lưu dữ liệu ra file","Tự báo khi có phiên bản mới, bấm một nút là cập nhật", "Có nút ⬅️ Trở về ngay trong lúc làm bài","Chọn lớp → chọn môn → bản đồ bài học, có nút Trở về", "Bài chưa học hiện mờ, phải học xong bài trước (và đạt bài kiểm tra từ 8 điểm) mới mở bài sau", "Bản đồ gom bài thành từng hàng theo cụm ôn tập / chủ đề", "Bộ sưu tập Thủy cung, Công viên khủng long, Khu vườn, Lâu đài: mỗi bộ 32 hình","Toán 5 – thêm Chủ đề 5: Một số hình phẳng, chu vi và diện tích (bài 25–29) và bài kiểm tra chủ đề 5","Toán 5 – thêm Chủ đề 4: Các phép tính với số thập phân (bài 19–24) và bài kiểm tra chủ đề 4","Toán 5 – thêm Chủ đề 3: Một số đơn vị đo diện tích (bài 15–18) và bài kiểm tra chủ đề 3","Lớp 5: hình vẽ mới dễ thương, chữ và ô nhập to hơn, không còn chữ bị hình che","Mở Lớp 5 – Toán 5: Chủ đề 1 (Ôn tập và bổ sung) và Chủ đề 2 (Số thập phân), bài 1–14", "Bàn phím số, ô phân số, hình minh họa và gợi ý cách làm", "Bài kiểm tra cuối mỗi chủ đề (10 câu, đạt từ 8 điểm)","Đổi tên thành Nhện Nhí Học Vui (Mầm non đến Lớp 5)", "3 mức tốc độ mới: Chậm, Vừa, Nhanh", "Thêm mục Thông tin tác giả và Cập nhật ứng dụng", "Tự sao lưu dữ liệu học của các bé"];
+const APP_VER = '2.7.1';
+const APP_NOTES = ["Máy không có giọng tiếng Việt (vd máy tính bảng Huawei) thì tự đọc bằng giọng qua mạng","Máy tính bảng: nút 🔒 Khóa màn hình (toàn màn hình, nằm ngang), mở khóa bằng câu hỏi dành cho bố mẹ","Đổi phông chữ: chữ a, g viết kiểu chữ in như sách giáo khoa Việt Nam (dùng được cả khi không có mạng)","Có thêm bộ chạy trên máy tính bảng (mở bằng trình duyệt), sao lưu dữ liệu ra file","Tự báo khi có phiên bản mới, bấm một nút là cập nhật", "Có nút ⬅️ Trở về ngay trong lúc làm bài","Chọn lớp → chọn môn → bản đồ bài học, có nút Trở về", "Bài chưa học hiện mờ, phải học xong bài trước (và đạt bài kiểm tra từ 8 điểm) mới mở bài sau", "Bản đồ gom bài thành từng hàng theo cụm ôn tập / chủ đề", "Bộ sưu tập Thủy cung, Công viên khủng long, Khu vườn, Lâu đài: mỗi bộ 32 hình","Toán 5 – thêm Chủ đề 5: Một số hình phẳng, chu vi và diện tích (bài 25–29) và bài kiểm tra chủ đề 5","Toán 5 – thêm Chủ đề 4: Các phép tính với số thập phân (bài 19–24) và bài kiểm tra chủ đề 4","Toán 5 – thêm Chủ đề 3: Một số đơn vị đo diện tích (bài 15–18) và bài kiểm tra chủ đề 3","Lớp 5: hình vẽ mới dễ thương, chữ và ô nhập to hơn, không còn chữ bị hình che","Mở Lớp 5 – Toán 5: Chủ đề 1 (Ôn tập và bổ sung) và Chủ đề 2 (Số thập phân), bài 1–14", "Bàn phím số, ô phân số, hình minh họa và gợi ý cách làm", "Bài kiểm tra cuối mỗi chủ đề (10 câu, đạt từ 8 điểm)","Đổi tên thành Nhện Nhí Học Vui (Mầm non đến Lớp 5)", "3 mức tốc độ mới: Chậm, Vừa, Nhanh", "Thêm mục Thông tin tác giả và Cập nhật ứng dụng", "Tự sao lưu dữ liệu học của các bé"];
 const SPEEDS = { cham: { ic: '🐢', n: 'Chậm', rate: 1.1, k: 1 }, vua: { ic: '🚶', n: 'Vừa', rate: 1.35, k: .7 }, nhanh: { ic: '🐇', n: 'Nhanh', rate: 1.6, k: .5 } };
 const SPD = () => SPEEDS[(G.p && G.p.speed) || 'vua'] || SPEEDS.vua;
 const D = ms => Math.round(ms * SPD().k);
@@ -1690,17 +1691,46 @@ const AU = {
     }
   },
 };
+/* Giọng đọc dự phòng qua mạng: máy không có giọng tiếng Việt (vd máy tính bảng Huawei không có dịch vụ Google)
+   thì tải tiếng đọc từ mạng, phát bằng <audio>. Có hàng đợi, tải trước các câu sắp đọc để đếm liền mạch. */
+const NETV = {
+  q: [], cur: null, fails: 0,
+  url: t => 'https://translate.google.com/translate_tts?ie=UTF-8&tl=vi&client=tw-ob&q=' + encodeURIComponent(t),
+  split(text) { // mỗi đoạn tối đa ~180 ký tự, cắt ở dấu câu / khoảng trắng
+    const out = []; let s = String(text).replace(/\s+/g, ' ').trim();
+    while (s.length > 180) { let k = Math.max(s.lastIndexOf('. ', 180), s.lastIndexOf(', ', 180), s.lastIndexOf('! ', 180), s.lastIndexOf('? ', 180)); if (k < 60) k = s.lastIndexOf(' ', 180); if (k < 1) k = 180; out.push(s.slice(0, k + 1).trim()); s = s.slice(k + 1).trim(); }
+    if (s) out.push(s); return out;
+  },
+  add(text, h = {}) {
+    const parts = this.split(text); if (!parts.length) { h.onend && h.onend(); return; }
+    parts.forEach((p, i) => { const a = new Audio(); a.preload = 'auto'; a.src = this.url(p); this.q.push({ a, fast: h.fast, onstart: i === 0 ? h.onstart : null, onend: i === parts.length - 1 ? h.onend : null }); });
+    if (!this.cur) this.next();
+  },
+  next() {
+    const it = this.cur = this.q.shift(); if (!it) { AU.duck(false); return; }
+    const done = () => { if (this.cur !== it) return; this.cur = null; it.onend && it.onend(); this.next(); };
+    it.a.playbackRate = Math.max(.9, Math.min(1.8, SPD().rate / 1.1 * (it.fast ? 1.15 : 1)));
+    it.a.onended = () => { this.fails = 0; done(); };
+    it.a.onerror = () => { this.fails++; done(); };
+    AU.duck(true); it.onstart && it.onstart();
+    const p = it.a.play(); if (p && p.catch) p.catch(() => { this.fails++; done(); });
+  },
+  stop() { this.q = []; const c = this.cur; this.cur = null; if (c) { try { c.a.pause(); } catch (e) { } } AU.duck(false); },
+};
 const VOICE = {
-  v: null,
+  v: null, net: false,
+  get ok() { return !!this.v || this.net; },   // có cách đọc tiếng Việt không (giọng trên máy hoặc qua mạng)
   pick() {
-    if (!('speechSynthesis' in window)) return;
-    const vs = speechSynthesis.getVoices().filter(v => (v.lang || '').toLowerCase().startsWith('vi'));
+    const vs = ('speechSynthesis' in window ? speechSynthesis.getVoices() : []).filter(v => (v.lang || '').toLowerCase().startsWith('vi'));
     this.v = vs.find(v => /HoaiMy/i.test(v.name)) || vs.find(v => /Natural|Online/i.test(v.name)) || vs[0] || null;
+    this.net = !this.v;   // không có giọng Việt trên máy → dùng giọng đọc qua mạng
     updateVoiceBtn();
   },
+  stop() { if (window.speechSynthesis) speechSynthesis.cancel(); NETV.stop(); },
   say(text) {
-    if (!AU.voice || !this.v || this.seq) return;   // đang đếm / đánh vần thì không chen ngang
-    speechSynthesis.cancel();
+    if (!AU.voice || !this.ok || this.seq) return;   // đang đếm / đánh vần thì không chen ngang
+    this.stop();
+    if (!this.v) return NETV.add(text);
     const u = new SpeechSynthesisUtterance(text);
     u.voice = this.v; u.lang = this.v.lang; u.rate = SPD().rate; u.pitch = 1.15;
     u.onstart = () => AU.duck(true); u.onend = u.onerror = () => AU.duck(false);
@@ -1708,7 +1738,8 @@ const VOICE = {
   },
   // Đọc nối tiếp (không ngắt câu trước), báo lại lúc bắt đầu và lúc đọc xong
   sayQ(text, h = {}) {
-    if (!AU.voice || !this.v) return false;
+    if (!AU.voice || !this.ok) return false;
+    if (!this.v) { NETV.add(text, h); return true; }
     const u = new SpeechSynthesisUtterance(text);
     u.voice = this.v; u.lang = this.v.lang; u.rate = Math.min(2, SPD().rate * (h.fast ? 1.1 : 1)); u.pitch = 1.15;
     u.onstart = () => { AU.duck(true); h.onstart && h.onstart(); };
@@ -1733,9 +1764,9 @@ function speakSeq(list, gap) {
       if (done) return; done = true; clearInterval(wd); showUpTo(list.length - 1);
       SKIP = null; VOICE.seq = Math.max(0, VOICE.seq - 1); res0();
     };
-    SKIP = () => { if (window.speechSynthesis) speechSynthesis.cancel(); finish(); };
+    SKIP = () => { VOICE.stop(); finish(); };
     const fast = list.length >= 6;   // đếm nhiều thì đọc nhanh hơn một chút
-    if (VOICE.v && AU.voice) {
+    if (VOICE.ok && AU.voice) {
       list.forEach((it, j) => VOICE.sayQ(it.text, { fast, onstart: () => showUpTo(j), onend: () => { if (j === list.length - 1) setTimeout(finish, 40); } }));
       // dự phòng nếu giọng đọc bị kẹt: tự hiện mục tiếp theo
       let last = -2, t0 = Date.now();
@@ -1760,7 +1791,8 @@ function sayP(text, maxMs = 6000) {
 function countAloud(cells) {
   return speakSeq([...cells].map((c, i) => ({ text: WORDS[i + 1], show: () => { c.insertAdjacentHTML('beforeend', `<div class="badge">${i + 1}</div>`); c.classList.add('hop'); AU.sfx('pop', i); } })));
 }
-if ('speechSynthesis' in window) { speechSynthesis.onvoiceschanged = () => VOICE.pick(); setTimeout(() => VOICE.pick(), 300); }
+if ('speechSynthesis' in window) speechSynthesis.onvoiceschanged = () => VOICE.pick();
+setTimeout(() => VOICE.pick(), 300); setTimeout(() => VOICE.pick(), 1500);
 
 /* ═════════════════ LƯU TRỮ ═════════════════ */
 const DB = {
@@ -1825,7 +1857,7 @@ function show(id) {
   document.querySelectorAll('.ov').forEach(o => o.classList.remove('on'));
   if ($('#sun')) $('#sun').style.display = (id === 'home' || id === 'create') ? '' : 'none';
   $('#topbar').style.display = (id === 'play' || id === 'map') ? '' : 'none';
-  if ('speechSynthesis' in window) speechSynthesis.cancel();
+  VOICE.stop();
 }
 function confetti(n = 60) {
   const cols = ['#ff6b6b', '#ffd23f', '#6cc24a', '#4d96ff', '#a06cd5', '#ff9f43', '#ff8fab', '#4ecdc4'];
@@ -1944,15 +1976,15 @@ function updateTop() {
 }
 function updateVoiceBtn() {
   const b = $('#voiBtn'); if (!b) return;
-  b.style.display = VOICE.v ? '' : 'none';
+  b.style.display = VOICE.ok ? '' : 'none';
   b.classList.toggle('off', !AU.voice);
 }
 $('#homeBtn').onclick = () => { AU.sfx('tap'); showHome(); };
-$('#mapBtn').onclick = () => { AU.sfx('tap'); if (window.speechSynthesis) speechSynthesis.cancel(); showMap(); };
+$('#mapBtn').onclick = () => { AU.sfx('tap'); VOICE.stop(); showMap(); };
 $('#chip').onclick = () => { AU.sfx('tap'); saveProg(); showCreate(G.p); };
 $('#garBtn').onclick = () => { AU.sfx('tap'); openGarage(); };
 $('#musBtn').onclick = () => { AU.setMusic(!AU.music); DB.d.music = AU.music; DB.save(); $('#musBtn').classList.toggle('off', !AU.music); };
-$('#voiBtn').onclick = () => { AU.voice = !AU.voice; DB.d.voice = AU.voice; DB.save(); updateVoiceBtn(); if (!AU.voice) speechSynthesis.cancel(); else VOICE.say('Xin chào!'); };
+$('#voiBtn').onclick = () => { AU.voice = !AU.voice; DB.d.voice = AU.voice; DB.save(); updateVoiceBtn(); if (!AU.voice) VOICE.stop(); else VOICE.say('Xin chào!'); };
 $('#musBtn').classList.toggle('off', !AU.music);
 // Nút tốc độ: Chậm → Vừa → Nhanh
 $('#spdBtn').onclick = () => {
@@ -2118,7 +2150,7 @@ function tryMatch(n, cnt) {
       return;
     }
     const cells = card.el.querySelectorAll('.cell'), tok = TOKEN;
-    if (window.speechSynthesis) speechSynthesis.cancel();
+    VOICE.stop();
     wait(D(100)).then(() => countAloud(cells)).then(() => {
       if (tok !== TOKEN) return;
       B.busy = false; B.matched++;
@@ -2182,7 +2214,7 @@ function answerQ(v, el) {
   $('#web').insertAdjacentHTML('beforeend', drawWeb(a.x + a.w / 2, a.y + 10, tg.x + tg.w / 2, qb ? tg.y + tg.h + 4 : tg.y + tg.h - 10, true));
   if (qb) { qb.innerHTML = q.fill ?? q.ans; qb.classList.add('ok'); }
   AU.sfx('ok'); setMood('happy'); G.stars++; updateTop();
-  if (window.speechSynthesis) speechSynthesis.cancel();   // dừng câu hỏi đang đọc dở để phần đếm khớp tiếng
+  VOICE.stop();   // dừng câu hỏi đang đọc dở để phần đếm khớp tiếng
   // Nếu có phần đếm / đánh vần thì làm xong phần đó rồi mới đọc câu kết
   const tok = TOKEN, r = q.onOk ? q.onOk() : null;
   const seq = r && r.then ? r : wait(D(r ? 400 + r : 200));
@@ -3042,7 +3074,7 @@ function qToneFind(base, tone, L1) {
 }
 function qListen(word, pool) {
   const others = shuffle(pool.filter(w => w !== word)).slice(0, 2);
-  return { text: VOICE.v ? 'Nghe và chọn đúng tiếng' : `Tìm tiếng “${word}”`, say: word, kind: 'word', opts: [word, ...others].map(v => ({ v })), ans: word, ok: word };
+  return { text: VOICE.ok ? 'Nghe và chọn đúng tiếng' : `Tìm tiếng “${word}”`, say: word, kind: 'word', opts: [word, ...others].map(v => ({ v })), ans: word, ok: word };
 }
 function qVanOf(word, van, vans) {
   const others = shuffle(vans.filter(v => v !== van)).slice(0, 2);
@@ -3543,7 +3575,7 @@ function q5Right() {
   const S = Q5, q = S.qs[S.i]; S.busy = true;
   if (S.tries === 0) S.first++;
   AU.sfx('ok'); setMood('happy'); G.stars++; updateTop();
-  if (window.speechSynthesis) speechSynthesis.cancel();
+  VOICE.stop();
   talk(pick(['Đúng rồi!', 'Giỏi quá!', 'Tuyệt vời!', 'Chính xác!']) + (q.ok ? ' ' + q.ok : ''), 2200);
   if (q.sol && !S.test) { showSol(q, true); q5NextBtn(); return; }
   later(q5Next, D(1300));
@@ -3576,7 +3608,7 @@ function startKP(cards) {
       <div class="kpn">${i ? '<button class="btn gray small" id="kpBack">⬅️ Quay lại</button>' : ''}<button class="btn" id="kpGo">${i < cards.length - 1 ? 'Tiếp ➡️' : LS && LS.si === LS.steps.length - 1 ? 'Hoàn thành ✅' : 'Bắt đầu luyện tập ✏️'}</button></div></div>`);
     const sayIt = () => VOICE.say(c.say || m5say(c.t + '. ' + c.h));
     $('#q5t').onclick = sayIt; later(sayIt, D(250));
-    $('#kpGo').onclick = () => { AU.sfx('tap'); if (window.speechSynthesis) speechSynthesis.cancel(); if (++i < cards.length) draw(); else stepDone(); };
+    $('#kpGo').onclick = () => { AU.sfx('tap'); VOICE.stop(); if (++i < cards.length) draw(); else stepDone(); };
     if ($('#kpBack')) $('#kpBack').onclick = () => { AU.sfx('tap'); i--; draw(); };
   };
   draw();
@@ -4163,7 +4195,7 @@ function openFact(t, i) {
     <div class="wtitle" style="color:${g.c}">${ob.name}</div><div class="wtext">${g.ic} ${t === 'xe' ? 'Phương tiện ' + g.n.toLowerCase() : th.name}</div>
     <div class="fact" style="width:auto"><b>💡 Con có biết?</b><br>${ob.fact}</div><button class="btn" id="fOk">👍 Đã hiểu</button>`;
   $('#ovFact').classList.add('on'); AU.sfx('pop', 4);
-  $('#fOk').onclick = () => { $('#ovFact').classList.remove('on'); if (window.speechSynthesis) speechSynthesis.cancel(); };
+  $('#fOk').onclick = () => { $('#ovFact').classList.remove('on'); VOICE.stop(); };
   VOICE.say(`${ob.name}. ${ob.fact}`);
 }
 
