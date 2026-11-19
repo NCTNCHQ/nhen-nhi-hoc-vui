@@ -1551,8 +1551,8 @@ function nextGift() { for (const t of [...myThemes(), ...THEME_KEYS]) { const u 
 
 // ---------- Tốc độ đọc ----------
 // ── PHIÊN BẢN: mỗi lần thêm nội dung mới thì TĂNG số này (vd 2.0.0 → 2.1.0) và ghi điều mới vào APP_NOTES ──
-const APP_VER = '2.7.2';
-const APP_NOTES = ["Sửa lỗi: đang khóa màn hình vẫn bấm Cập nhật ngay được", "Máy không có giọng tiếng Việt (vd máy tính bảng Huawei) thì tự đọc bằng giọng qua mạng","Máy tính bảng: nút 🔒 Khóa màn hình (toàn màn hình, nằm ngang), mở khóa bằng câu hỏi dành cho bố mẹ","Đổi phông chữ: chữ a, g viết kiểu chữ in như sách giáo khoa Việt Nam (dùng được cả khi không có mạng)","Có thêm bộ chạy trên máy tính bảng (mở bằng trình duyệt), sao lưu dữ liệu ra file","Tự báo khi có phiên bản mới, bấm một nút là cập nhật", "Có nút ⬅️ Trở về ngay trong lúc làm bài","Chọn lớp → chọn môn → bản đồ bài học, có nút Trở về", "Bài chưa học hiện mờ, phải học xong bài trước (và đạt bài kiểm tra từ 8 điểm) mới mở bài sau", "Bản đồ gom bài thành từng hàng theo cụm ôn tập / chủ đề", "Bộ sưu tập Thủy cung, Công viên khủng long, Khu vườn, Lâu đài: mỗi bộ 32 hình","Toán 5 – thêm Chủ đề 5: Một số hình phẳng, chu vi và diện tích (bài 25–29) và bài kiểm tra chủ đề 5","Toán 5 – thêm Chủ đề 4: Các phép tính với số thập phân (bài 19–24) và bài kiểm tra chủ đề 4","Toán 5 – thêm Chủ đề 3: Một số đơn vị đo diện tích (bài 15–18) và bài kiểm tra chủ đề 3","Lớp 5: hình vẽ mới dễ thương, chữ và ô nhập to hơn, không còn chữ bị hình che","Mở Lớp 5 – Toán 5: Chủ đề 1 (Ôn tập và bổ sung) và Chủ đề 2 (Số thập phân), bài 1–14", "Bàn phím số, ô phân số, hình minh họa và gợi ý cách làm", "Bài kiểm tra cuối mỗi chủ đề (10 câu, đạt từ 8 điểm)","Đổi tên thành Nhện Nhí Học Vui (Mầm non đến Lớp 5)", "3 mức tốc độ mới: Chậm, Vừa, Nhanh", "Thêm mục Thông tin tác giả và Cập nhật ứng dụng", "Tự sao lưu dữ liệu học của các bé"];
+const APP_VER = '2.7.3';
+const APP_NOTES = ["Giọng đọc qua mạng ổn định hơn (tải trước, tự thử lại, báo khi mạng yếu); bảng ℹ️ cho biết đang dùng giọng nào", "Sửa lỗi: đang khóa màn hình vẫn bấm Cập nhật ngay được", "Máy không có giọng tiếng Việt (vd máy tính bảng Huawei) thì tự đọc bằng giọng qua mạng","Máy tính bảng: nút 🔒 Khóa màn hình (toàn màn hình, nằm ngang), mở khóa bằng câu hỏi dành cho bố mẹ","Đổi phông chữ: chữ a, g viết kiểu chữ in như sách giáo khoa Việt Nam (dùng được cả khi không có mạng)","Có thêm bộ chạy trên máy tính bảng (mở bằng trình duyệt), sao lưu dữ liệu ra file","Tự báo khi có phiên bản mới, bấm một nút là cập nhật", "Có nút ⬅️ Trở về ngay trong lúc làm bài","Chọn lớp → chọn môn → bản đồ bài học, có nút Trở về", "Bài chưa học hiện mờ, phải học xong bài trước (và đạt bài kiểm tra từ 8 điểm) mới mở bài sau", "Bản đồ gom bài thành từng hàng theo cụm ôn tập / chủ đề", "Bộ sưu tập Thủy cung, Công viên khủng long, Khu vườn, Lâu đài: mỗi bộ 32 hình","Toán 5 – thêm Chủ đề 5: Một số hình phẳng, chu vi và diện tích (bài 25–29) và bài kiểm tra chủ đề 5","Toán 5 – thêm Chủ đề 4: Các phép tính với số thập phân (bài 19–24) và bài kiểm tra chủ đề 4","Toán 5 – thêm Chủ đề 3: Một số đơn vị đo diện tích (bài 15–18) và bài kiểm tra chủ đề 3","Lớp 5: hình vẽ mới dễ thương, chữ và ô nhập to hơn, không còn chữ bị hình che","Mở Lớp 5 – Toán 5: Chủ đề 1 (Ôn tập và bổ sung) và Chủ đề 2 (Số thập phân), bài 1–14", "Bàn phím số, ô phân số, hình minh họa và gợi ý cách làm", "Bài kiểm tra cuối mỗi chủ đề (10 câu, đạt từ 8 điểm)","Đổi tên thành Nhện Nhí Học Vui (Mầm non đến Lớp 5)", "3 mức tốc độ mới: Chậm, Vừa, Nhanh", "Thêm mục Thông tin tác giả và Cập nhật ứng dụng", "Tự sao lưu dữ liệu học của các bé"];
 const SPEEDS = { cham: { ic: '🐢', n: 'Chậm', rate: 1.1, k: 1 }, vua: { ic: '🚶', n: 'Vừa', rate: 1.35, k: .7 }, nhanh: { ic: '🐇', n: 'Nhanh', rate: 1.6, k: .5 } };
 const SPD = () => SPEEDS[(G.p && G.p.speed) || 'vua'] || SPEEDS.vua;
 const D = ms => Math.round(ms * SPD().k);
@@ -1694,29 +1694,65 @@ const AU = {
 /* Giọng đọc dự phòng qua mạng: máy không có giọng tiếng Việt (vd máy tính bảng Huawei không có dịch vụ Google)
    thì tải tiếng đọc từ mạng, phát bằng <audio>. Có hàng đợi, tải trước các câu sắp đọc để đếm liền mạch. */
 const NETV = {
-  q: [], cur: null, fails: 0,
+  q: [], cur: null, fails: 0, pool: [], unlocked: false, lastTip: 0,
+  SIL: 'data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEAQB8AAIA+AAACABAAZGF0YQAAAAA=',
   url: t => 'https://translate.google.com/translate_tts?ie=UTF-8&tl=vi&client=tw-ob&q=' + encodeURIComponent(t),
   split(text) { // mỗi đoạn tối đa ~180 ký tự, cắt ở dấu câu / khoảng trắng
     const out = []; let s = String(text).replace(/\s+/g, ' ').trim();
     while (s.length > 180) { let k = Math.max(s.lastIndexOf('. ', 180), s.lastIndexOf(', ', 180), s.lastIndexOf('! ', 180), s.lastIndexOf('? ', 180)); if (k < 60) k = s.lastIndexOf(' ', 180); if (k < 1) k = 180; out.push(s.slice(0, k + 1).trim()); s = s.slice(k + 1).trim(); }
     if (s) out.push(s); return out;
   },
+  // 4 "loa" dùng chung; được mở khóa ở lần chạm đầu tiên nên trình duyệt cho tự phát về sau
+  init() { for (let i = 0; i < 4; i++) { const a = new Audio(); a.preload = 'auto'; this.pool.push(a); } },
+  unlock() {
+    if (this.unlocked) return; this.unlocked = true;
+    this.pool.forEach(a => { if (a._it) return; a.src = this.SIL; try { const p = a.play(); if (p && p.then) p.then(() => a.pause(), () => { }); } catch (e) { } });
+  },
+  assign(it) {
+    if (it.el) return true; const a = this.pool.find(x => !x._it); if (!a) return false;
+    a._it = it; it.el = a; a.src = this.url(it.t); try { a.load(); } catch (e) { } return true;
+  },
+  fill() { for (const it of this.q) if (!this.assign(it)) break; },   // tải trước các câu sắp đọc
   add(text, h = {}) {
     const parts = this.split(text); if (!parts.length) { h.onend && h.onend(); return; }
-    parts.forEach((p, i) => { const a = new Audio(); a.preload = 'auto'; a.src = this.url(p); this.q.push({ a, fast: h.fast, onstart: i === 0 ? h.onstart : null, onend: i === parts.length - 1 ? h.onend : null }); });
-    if (!this.cur) this.next();
+    parts.forEach((p, i) => this.q.push({ t: p, fast: h.fast, onstart: i === 0 ? h.onstart : null, onend: i === parts.length - 1 ? h.onend : null }));
+    this.fill(); if (!this.cur) this.next();
   },
+  release(it) { const a = it.el; if (!a) return; a.onended = a.onerror = a.onplaying = null; try { a.pause(); } catch (e) { } a._it = null; it.el = null; },
   next() {
-    const it = this.cur = this.q.shift(); if (!it) { AU.duck(false); return; }
-    const done = () => { if (this.cur !== it) return; this.cur = null; it.onend && it.onend(); this.next(); };
-    it.a.playbackRate = Math.max(.9, Math.min(1.8, SPD().rate / 1.1 * (it.fast ? 1.15 : 1)));
-    it.a.onended = () => { this.fails = 0; done(); };
-    it.a.onerror = () => { this.fails++; done(); };
-    AU.duck(true); it.onstart && it.onstart();
-    const p = it.a.play(); if (p && p.catch) p.catch(() => { this.fails++; done(); });
+    const it = this.q.shift(); this.cur = it || null;
+    if (!it) { AU.duck(false); return; }
+    if (!this.assign(it)) { this.release(this.pool[0]._it || {}); this.assign(it); }
+    const el = it.el; let started = false, to = null;
+    const fin = ok => {
+      if (this.cur !== it) return; clearTimeout(to); this.release(it); this.cur = null;
+      if (!started && it.onstart) it.onstart();
+      if (ok) this.fails = 0; else this.fail();
+      it.onend && it.onend(); this.fill(); this.next();
+    };
+    const play = () => { try { const p = el.play(); if (p && p.catch) p.catch(e => { if (e && e.name === 'NotAllowedError') fin(false); }); } catch (e) { fin(false); } };
+    el.defaultPlaybackRate = el.playbackRate = Math.max(.9, Math.min(1.8, SPD().rate / 1.1 * (it.fast ? 1.15 : 1)));
+    el.onplaying = () => { if (started) return; started = true; it.onstart && it.onstart(); clearTimeout(to); to = setTimeout(() => fin(true), 20000); };
+    el.onended = () => fin(true);
+    el.onerror = () => { if (it.retry) return fin(false); it.retry = 1; el.src = this.url(it.t) + '&r=' + Date.now(); play(); };   // lỗi thì thử lại 1 lần
+    to = setTimeout(() => { if (!started) fin(false); }, 6000);   // mạng quá chậm: bỏ qua câu này để bé không phải chờ
+    AU.duck(true); play();
   },
-  stop() { this.q = []; const c = this.cur; this.cur = null; if (c) { try { c.a.pause(); } catch (e) { } } AU.duck(false); },
+  fail() {
+    this.fails++;
+    if (!AU.voice || Date.now() - this.lastTip < 15000) return; this.lastTip = Date.now();
+    let d = document.getElementById('netTip');
+    if (!d) { d = document.createElement('div'); d.id = 'netTip'; d.style.cssText = 'position:fixed;left:50%;top:12px;transform:translateX(-50%);z-index:999;background:#fff3cd;color:#7a5200;border:3px solid #ffc107;border-radius:999px;padding:6px 18px;font:700 17px Mali,sans-serif;box-shadow:0 4px 0 rgba(0,0,0,.15);pointer-events:none;transition:opacity .4s'; document.body.appendChild(d); }
+    d.textContent = '📶 Mạng yếu nên chưa đọc được, bố mẹ kiểm tra Wi-Fi nhé'; d.style.opacity = '1';
+    clearTimeout(this.tipT); this.tipT = setTimeout(() => { d.style.opacity = '0'; }, 3500);
+  },
+  stop() {
+    this.q.forEach(it => this.release(it)); this.q = [];
+    const c = this.cur; this.cur = null; if (c) this.release(c); AU.duck(false);
+  },
 };
+NETV.init();
+addEventListener('pointerdown', () => { if (VOICE.net) NETV.unlock(); }, true);
 const VOICE = {
   v: null, net: false,
   get ok() { return !!this.v || this.net; },   // có cách đọc tiếng Việt không (giọng trên máy hoặc qua mạng)
@@ -2485,7 +2521,7 @@ const infoClose = () => { AU.sfx('tap'); $('#ovInfo').classList.remove('on'); };
 function showAuthor() {
   $('#infoPanel').innerHTML = `<div class="wtitle" style="color:var(--grape)">ℹ️ Thông tin ứng dụng</div>
     <div class="infoBox">🕷️ <b>Nhện Nhí Học Vui</b><small>Mầm non đến Lớp 5 • Tiếng Việt • Toán • Màu sắc</small>
-      ✏️ Tác giả: <b>Nguyễn Công Trung</b><br>✉️ congtrung127@gmail.com<small>Phiên bản ${APP_VER}</small></div>
+      ✏️ Tác giả: <b>Nguyễn Công Trung</b><br>✉️ congtrung127@gmail.com<small>Phiên bản ${APP_VER}<br>🗣️ Giọng đọc: ${VOICE.v ? 'có sẵn trong máy (' + esc(VOICE.v.name) + ')' : VOICE.net ? 'qua mạng (cần internet)' : 'không có'}</small></div>
     <button class="btn grape" id="iOk">👍 Đóng</button>`;
   $('#ovInfo').classList.add('on'); $('#iOk').onclick = infoClose;
 }
