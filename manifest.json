@@ -1,0 +1,16 @@
+{
+  "name": "Nhện Nhí Học Vui",
+  "short_name": "Nhện Nhí",
+  "description": "Mầm non đến Lớp 5 • Tiếng Việt • Toán • Màu sắc",
+  "lang": "vi",
+  "start_url": "./",
+  "scope": "./",
+  "display": "fullscreen",
+  "orientation": "landscape",
+  "background_color": "#7cc8f5",
+  "theme_color": "#a06cd5",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ]
+}
