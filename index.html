@@ -1551,8 +1551,8 @@ function nextGift() { for (const t of [...myThemes(), ...THEME_KEYS]) { const u 
 
 // ---------- Tốc độ đọc ----------
 // ── PHIÊN BẢN: mỗi lần thêm nội dung mới thì TĂNG số này (vd 2.0.0 → 2.1.0) và ghi điều mới vào APP_NOTES ──
-const APP_VER = '2.7.1';
-const APP_NOTES = ["Máy không có giọng tiếng Việt (vd máy tính bảng Huawei) thì tự đọc bằng giọng qua mạng","Máy tính bảng: nút 🔒 Khóa màn hình (toàn màn hình, nằm ngang), mở khóa bằng câu hỏi dành cho bố mẹ","Đổi phông chữ: chữ a, g viết kiểu chữ in như sách giáo khoa Việt Nam (dùng được cả khi không có mạng)","Có thêm bộ chạy trên máy tính bảng (mở bằng trình duyệt), sao lưu dữ liệu ra file","Tự báo khi có phiên bản mới, bấm một nút là cập nhật", "Có nút ⬅️ Trở về ngay trong lúc làm bài","Chọn lớp → chọn môn → bản đồ bài học, có nút Trở về", "Bài chưa học hiện mờ, phải học xong bài trước (và đạt bài kiểm tra từ 8 điểm) mới mở bài sau", "Bản đồ gom bài thành từng hàng theo cụm ôn tập / chủ đề", "Bộ sưu tập Thủy cung, Công viên khủng long, Khu vườn, Lâu đài: mỗi bộ 32 hình","Toán 5 – thêm Chủ đề 5: Một số hình phẳng, chu vi và diện tích (bài 25–29) và bài kiểm tra chủ đề 5","Toán 5 – thêm Chủ đề 4: Các phép tính với số thập phân (bài 19–24) và bài kiểm tra chủ đề 4","Toán 5 – thêm Chủ đề 3: Một số đơn vị đo diện tích (bài 15–18) và bài kiểm tra chủ đề 3","Lớp 5: hình vẽ mới dễ thương, chữ và ô nhập to hơn, không còn chữ bị hình che","Mở Lớp 5 – Toán 5: Chủ đề 1 (Ôn tập và bổ sung) và Chủ đề 2 (Số thập phân), bài 1–14", "Bàn phím số, ô phân số, hình minh họa và gợi ý cách làm", "Bài kiểm tra cuối mỗi chủ đề (10 câu, đạt từ 8 điểm)","Đổi tên thành Nhện Nhí Học Vui (Mầm non đến Lớp 5)", "3 mức tốc độ mới: Chậm, Vừa, Nhanh", "Thêm mục Thông tin tác giả và Cập nhật ứng dụng", "Tự sao lưu dữ liệu học của các bé"];
+const APP_VER = '2.7.2';
+const APP_NOTES = ["Sửa lỗi: đang khóa màn hình vẫn bấm Cập nhật ngay được", "Máy không có giọng tiếng Việt (vd máy tính bảng Huawei) thì tự đọc bằng giọng qua mạng","Máy tính bảng: nút 🔒 Khóa màn hình (toàn màn hình, nằm ngang), mở khóa bằng câu hỏi dành cho bố mẹ","Đổi phông chữ: chữ a, g viết kiểu chữ in như sách giáo khoa Việt Nam (dùng được cả khi không có mạng)","Có thêm bộ chạy trên máy tính bảng (mở bằng trình duyệt), sao lưu dữ liệu ra file","Tự báo khi có phiên bản mới, bấm một nút là cập nhật", "Có nút ⬅️ Trở về ngay trong lúc làm bài","Chọn lớp → chọn môn → bản đồ bài học, có nút Trở về", "Bài chưa học hiện mờ, phải học xong bài trước (và đạt bài kiểm tra từ 8 điểm) mới mở bài sau", "Bản đồ gom bài thành từng hàng theo cụm ôn tập / chủ đề", "Bộ sưu tập Thủy cung, Công viên khủng long, Khu vườn, Lâu đài: mỗi bộ 32 hình","Toán 5 – thêm Chủ đề 5: Một số hình phẳng, chu vi và diện tích (bài 25–29) và bài kiểm tra chủ đề 5","Toán 5 – thêm Chủ đề 4: Các phép tính với số thập phân (bài 19–24) và bài kiểm tra chủ đề 4","Toán 5 – thêm Chủ đề 3: Một số đơn vị đo diện tích (bài 15–18) và bài kiểm tra chủ đề 3","Lớp 5: hình vẽ mới dễ thương, chữ và ô nhập to hơn, không còn chữ bị hình che","Mở Lớp 5 – Toán 5: Chủ đề 1 (Ôn tập và bổ sung) và Chủ đề 2 (Số thập phân), bài 1–14", "Bàn phím số, ô phân số, hình minh họa và gợi ý cách làm", "Bài kiểm tra cuối mỗi chủ đề (10 câu, đạt từ 8 điểm)","Đổi tên thành Nhện Nhí Học Vui (Mầm non đến Lớp 5)", "3 mức tốc độ mới: Chậm, Vừa, Nhanh", "Thêm mục Thông tin tác giả và Cập nhật ứng dụng", "Tự sao lưu dữ liệu học của các bé"];
 const SPEEDS = { cham: { ic: '🐢', n: 'Chậm', rate: 1.1, k: 1 }, vua: { ic: '🚶', n: 'Vừa', rate: 1.35, k: .7 }, nhanh: { ic: '🐇', n: 'Nhanh', rate: 1.6, k: .5 } };
 const SPD = () => SPEEDS[(G.p && G.p.speed) || 'vua'] || SPEEDS.vua;
 const D = ms => Math.round(ms * SPD().k);
@@ -2443,7 +2443,7 @@ const UPD = (() => {
     check() { return api ? call('check').then(r => (this.info = r)) : web ? webCheck().then(r => (this.info = r)) : Promise.reject(new Error('noapi')); },
     backup(why) { if (web) { DB.save(); return Promise.resolve({ ok: true }); } if (!api) return Promise.resolve(null); DB.save(); return call('backup?why=' + why, localStorage.getItem(DB.k) || '{}').catch(() => null); },
     update() { return web ? Promise.resolve({ ok: true, ver: (this.info || {}).ver || APP_VER }) : call('update'); },
-    reload() { if (web) location.replace(location.pathname + '?v=' + encodeURIComponent((this.info || {}).ver || Date.now())); else location.reload(); },
+    reload() { window.LEAVE_OK = true; if (web) location.replace(location.pathname + '?v=' + encodeURIComponent((this.info || {}).ver || Date.now())); else location.reload(); },
     list() { return call('backups'); },
     restore(f) { return call('restore?f=' + encodeURIComponent(f)); },
   };
@@ -2476,7 +2476,7 @@ function loadFile(done) {
       const x = JSON.parse(t);
       if (!x || !Array.isArray(x.players)) throw new Error('File này không phải file sao lưu của game');
       if (!confirm(`Khôi phục ${x.players.length} học sinh từ file "${f.name}"? Dữ liệu hiện tại trên máy sẽ được thay thế.`)) return;
-      localStorage.setItem(DB.k, JSON.stringify(x)); location.reload();
+      localStorage.setItem(DB.k, JSON.stringify(x)); window.LEAVE_OK = true; location.reload();
     }).catch(e => done('😿 ' + (e.message || 'File bị hỏng')));
   };
   inp.click();
@@ -2546,7 +2546,7 @@ function showBackups() {
       if (!confirm('Khôi phục dữ liệu về bản sao lưu này? Dữ liệu hiện tại sẽ được sao lưu lại trước.')) return;
       UPD.backup('truoc-khoi-phuc').then(() => UPD.restore(b.dataset.f)).then(x => {
         if (!x.ok || !x.data || !Array.isArray(x.data.players)) throw new Error(x.err || 'File sao lưu bị hỏng');
-        localStorage.setItem(DB.k, JSON.stringify(x.data)); location.reload();
+        localStorage.setItem(DB.k, JSON.stringify(x.data)); window.LEAVE_OK = true; location.reload();
       }).catch(e => { $('#bMsg').textContent = '😿 ' + e.message; });
     });
   }).catch(() => { $('#bList').textContent = 'Không đọc được danh sách sao lưu.'; });
@@ -2639,7 +2639,7 @@ if (UPD.web) {
   addEventListener('popstate', () => { if (!KL.on) return; KL.trap(); showGate('exit'); });
   const fsOff = () => { if (KL.on && !(document.fullscreenElement || document.webkitFullscreenElement)) showResume(); };
   document.addEventListener('fullscreenchange', fsOff); document.addEventListener('webkitfullscreenchange', fsOff);
-  addEventListener('beforeunload', e => { if (KL.on) { e.preventDefault(); e.returnValue = ''; } });
+  addEventListener('beforeunload', e => { if (KL.on && !window.LEAVE_OK) { /* cập nhật / khôi phục thì cho tải lại */ e.preventDefault(); e.returnValue = ''; } });
 }
 // Mỗi lần mở game: tự sao lưu dữ liệu và xem có bản mới không (có thì báo + nút 🔄 hiện chấm đỏ)
 if (UPD.api || UPD.web) setTimeout(() => { UPD.backup('mo-game'); UPD.check().then(r => { if (r.ok && r.newer) { $('#updBtn').classList.add('has'); showNewVer(r); } }).catch(() => { }); }, 1500);
