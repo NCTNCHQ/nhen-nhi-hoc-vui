@@ -72,6 +72,17 @@ svg{overflow:visible}
 .infoBox{background:#f6f2ff;border-radius:22px;padding:14px 18px;margin:12px 0 16px;font-size:20px;font-weight:700;color:#5b4f86;line-height:1.6}
 .infoBox b{color:var(--grape)}
 .infoBox small{display:block;font-size:15px;color:#8a7fb0}
+/* khóa màn hình (máy tính bảng) */
+.ibtn.lockb{width:auto;padding:0 16px;border-radius:999px;font-size:20px;font-weight:800;color:#fff;gap:6px;background:#9a93b8}
+.ibtn.lockb.on{background:var(--coral)}
+#ovLock .panel{width:600px;padding:22px 30px 24px;text-align:center;border-color:var(--coral)}
+.lkQ{font-size:46px;font-weight:800;color:var(--ink);margin:4px 0 10px;font-family:'Segoe UI','Mali',sans-serif}
+.lkQ sup{font-size:.55em}
+.lkV{height:64px;width:260px;margin:0 auto 12px;border:4px solid #c9bfe6;border-radius:18px;font-size:40px;font-weight:800;display:flex;align-items:center;justify-content:center;background:#f6f2ff}
+.lkV.bad{border-color:var(--coral);animation:shake .4s}
+.lkPad{display:grid;grid-template-columns:repeat(5,82px);gap:8px;justify-content:center;margin-bottom:14px}
+.lkPad button{font:inherit;font-size:30px;font-weight:800;height:60px;border-radius:16px;border:3px solid #e4dcf5;background:#fff;color:var(--ink);cursor:pointer;box-shadow:0 4px 0 #e4dcf5}
+.lkPad button:active{transform:translateY(3px);box-shadow:none}
 .updMsg{font-size:19px;font-weight:700;color:#5b4f86;margin:6px 0 12px;min-height:28px}
 .updNotes{text-align:left;font-size:17px;font-weight:600;color:#5b4f86;background:#fff8e6;border-radius:16px;padding:10px 16px 10px 34px;margin:0 0 14px;max-height:190px;overflow:auto}
 .updRow{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
@@ -570,6 +581,7 @@ svg.build{width:420px;height:270px}
     <div class="homeBtns">
       <div class="ibtn" id="infoBtn" title="Tác giả" style="background:var(--grape)">ℹ️</div>
       <div class="ibtn" id="updBtn" title="Cập nhật ứng dụng" style="background:var(--leaf, #6fcf57)">🔄<span class="dot"></span></div>
+      <div class="ibtn lockb" id="lockBtn" title="Khóa màn hình" style="display:none"></div>
     </div>
     <div class="right">
       <h2>Ai đang chơi nào? 👋</h2>
@@ -643,6 +655,7 @@ svg.build{width:420px;height:270px}
   <div class="ov" id="ovFact"><div class="panel" id="factPanel"></div></div>
   <div class="ov" id="ovRank"><div class="panel" id="rankPanel"></div></div>
   <div class="ov" id="ovInfo"><div class="panel" id="infoPanel"></div></div>
+  <div class="ov" id="ovLock" style="z-index:90"><div class="panel" id="lockPanel"></div></div>
 </div>
 
 <script>
@@ -1537,8 +1550,8 @@ function nextGift() { for (const t of [...myThemes(), ...THEME_KEYS]) { const u 
 
 // ---------- Tốc độ đọc ----------
 // ── PHIÊN BẢN: mỗi lần thêm nội dung mới thì TĂNG số này (vd 2.0.0 → 2.1.0) và ghi điều mới vào APP_NOTES ──
-const APP_VER = '2.6.1';
-const APP_NOTES = ["Đổi phông chữ: chữ a, g viết kiểu chữ in như sách giáo khoa Việt Nam (dùng được cả khi không có mạng)","Có thêm bộ chạy trên máy tính bảng (mở bằng trình duyệt), sao lưu dữ liệu ra file","Tự báo khi có phiên bản mới, bấm một nút là cập nhật", "Có nút ⬅️ Trở về ngay trong lúc làm bài","Chọn lớp → chọn môn → bản đồ bài học, có nút Trở về", "Bài chưa học hiện mờ, phải học xong bài trước (và đạt bài kiểm tra từ 8 điểm) mới mở bài sau", "Bản đồ gom bài thành từng hàng theo cụm ôn tập / chủ đề", "Bộ sưu tập Thủy cung, Công viên khủng long, Khu vườn, Lâu đài: mỗi bộ 32 hình","Toán 5 – thêm Chủ đề 5: Một số hình phẳng, chu vi và diện tích (bài 25–29) và bài kiểm tra chủ đề 5","Toán 5 – thêm Chủ đề 4: Các phép tính với số thập phân (bài 19–24) và bài kiểm tra chủ đề 4","Toán 5 – thêm Chủ đề 3: Một số đơn vị đo diện tích (bài 15–18) và bài kiểm tra chủ đề 3","Lớp 5: hình vẽ mới dễ thương, chữ và ô nhập to hơn, không còn chữ bị hình che","Mở Lớp 5 – Toán 5: Chủ đề 1 (Ôn tập và bổ sung) và Chủ đề 2 (Số thập phân), bài 1–14", "Bàn phím số, ô phân số, hình minh họa và gợi ý cách làm", "Bài kiểm tra cuối mỗi chủ đề (10 câu, đạt từ 8 điểm)","Đổi tên thành Nhện Nhí Học Vui (Mầm non đến Lớp 5)", "3 mức tốc độ mới: Chậm, Vừa, Nhanh", "Thêm mục Thông tin tác giả và Cập nhật ứng dụng", "Tự sao lưu dữ liệu học của các bé"];
+const APP_VER = '2.7.0';
+const APP_NOTES = ["Máy tính bảng: nút 🔒 Khóa màn hình (toàn màn hình, nằm ngang), mở khóa bằng câu hỏi dành cho bố mẹ","Đổi phông chữ: chữ a, g viết kiểu chữ in như sách giáo khoa Việt Nam (dùng được cả khi không có mạng)","Có thêm bộ chạy trên máy tính bảng (mở bằng trình duyệt), sao lưu dữ liệu ra file","Tự báo khi có phiên bản mới, bấm một nút là cập nhật", "Có nút ⬅️ Trở về ngay trong lúc làm bài","Chọn lớp → chọn môn → bản đồ bài học, có nút Trở về", "Bài chưa học hiện mờ, phải học xong bài trước (và đạt bài kiểm tra từ 8 điểm) mới mở bài sau", "Bản đồ gom bài thành từng hàng theo cụm ôn tập / chủ đề", "Bộ sưu tập Thủy cung, Công viên khủng long, Khu vườn, Lâu đài: mỗi bộ 32 hình","Toán 5 – thêm Chủ đề 5: Một số hình phẳng, chu vi và diện tích (bài 25–29) và bài kiểm tra chủ đề 5","Toán 5 – thêm Chủ đề 4: Các phép tính với số thập phân (bài 19–24) và bài kiểm tra chủ đề 4","Toán 5 – thêm Chủ đề 3: Một số đơn vị đo diện tích (bài 15–18) và bài kiểm tra chủ đề 3","Lớp 5: hình vẽ mới dễ thương, chữ và ô nhập to hơn, không còn chữ bị hình che","Mở Lớp 5 – Toán 5: Chủ đề 1 (Ôn tập và bổ sung) và Chủ đề 2 (Số thập phân), bài 1–14", "Bàn phím số, ô phân số, hình minh họa và gợi ý cách làm", "Bài kiểm tra cuối mỗi chủ đề (10 câu, đạt từ 8 điểm)","Đổi tên thành Nhện Nhí Học Vui (Mầm non đến Lớp 5)", "3 mức tốc độ mới: Chậm, Vừa, Nhanh", "Thêm mục Thông tin tác giả và Cập nhật ứng dụng", "Tự sao lưu dữ liệu học của các bé"];
 const SPEEDS = { cham: { ic: '🐢', n: 'Chậm', rate: 1.1, k: 1 }, vua: { ic: '🚶', n: 'Vừa', rate: 1.35, k: .7 }, nhanh: { ic: '🐇', n: 'Nhanh', rate: 1.6, k: .5 } };
 const SPD = () => SPEEDS[(G.p && G.p.speed) || 'vua'] || SPEEDS.vua;
 const D = ms => Math.round(ms * SPD().k);
@@ -2406,9 +2419,11 @@ const UPD = (() => {
 // Bộ máy tính bảng: xin trình duyệt giữ dữ liệu lâu dài, mở toàn màn hình khi bé bắt đầu chơi
 if (UPD.web && navigator.storage && navigator.storage.persist) navigator.storage.persist().catch(() => { });
 function goFull() {
-  if (!UPD.web || document.fullscreenElement || matchMedia('(display-mode: fullscreen), (display-mode: standalone)').matches) return;
+  if (!UPD.web) return;
+  const land = () => { try { screen.orientation.lock('landscape').catch(() => { }); } catch (e) { } }; // giữ màn hình nằm ngang
+  if (document.fullscreenElement || document.webkitFullscreenElement || matchMedia('(display-mode: fullscreen)').matches) return land();
   const el = document.documentElement, f = el.requestFullscreen || el.webkitRequestFullscreen;
-  try { const p = f && f.call(el); if (p && p.catch) p.catch(() => { }); } catch (e) { }
+  try { const p = f && f.call(el); if (p && p.then) p.then(land, () => { }); else land(); } catch (e) { }
 }
 // Sao lưu ra file / khôi phục từ file (dùng cho máy tính bảng)
 function saveFile() {
@@ -2517,6 +2532,82 @@ function showNewVer(r) {
   $('#ovInfo').classList.add('on'); AU.sfx('tada');
   $('#nvLater').onclick = infoClose;
   $('#nvGo').onclick = () => { AU.init(); AU.sfx('tap'); showUpdate(true); };
+}
+/* ═════════════════ KHÓA MÀN HÌNH (chỉ bộ máy tính bảng) ═════════════════
+   Bật khóa: toàn màn hình + giữ nằm ngang; bé bấm "quay lại" hay vuốt thoát toàn màn hình thì game giữ lại / mời chạm để chơi tiếp.
+   Muốn tắt khóa phải trả lời một câu toán dành cho người lớn (căn bậc hai, lũy thừa – chương trình tiểu học chưa học). */
+const KL = {
+  on: false,
+  paint() {
+    const b = $('#lockBtn'); if (!b) return;
+    b.style.display = UPD.web ? 'flex' : 'none';
+    b.classList.toggle('on', this.on);
+    b.innerHTML = this.on ? '🔒 Đang khóa' : '🔓 Khóa màn hình';
+  },
+  set(v) { this.on = v; DB.d.kidLock = v; DB.save(); this.paint(); },
+  trap() { try { history.pushState({ kl: 1 }, ''); } catch (e) { } },
+};
+const lkHide = () => $('#ovLock').classList.remove('on');
+function lockOn() {
+  AU.sfx('tap'); KL.set(true); KL.trap(); goFull();
+  $('#lockPanel').innerHTML = `<div class="wtitle" style="color:var(--coral)">🔒 Đã khóa màn hình</div>
+    <div class="infoBox">Bé chơi thoải mái, bấm “quay lại” hay vuốt ra ngoài cũng không thoát được game.
+      <small>Muốn mở khóa: về màn hình chính của game, bấm “🔒 Đang khóa” rồi trả lời câu hỏi dành cho bố mẹ.</small></div>
+    <button class="btn" id="lkOk">👍 Bắt đầu chơi</button>`;
+  $('#ovLock').classList.add('on'); $('#lkOk').onclick = () => { AU.sfx('tap'); goFull(); lkHide(); };
+}
+// Câu hỏi cho bố mẹ: dùng kiến thức trên lớp 5 (căn bậc hai, lũy thừa) để bé không tự trả lời được
+function gateQ() {
+  const r = (a, b) => a + Math.floor(Math.random() * (b - a + 1)), t = r(0, 2);
+  if (t === 0) { const k = r(23, 89); return { q: `√${k * k} = ?`, a: k }; }
+  if (t === 1) { const a = r(13, 29), b = r(11, 99); return { q: `${a}<sup>2</sup> + ${b} = ?`, a: a * a + b }; }
+  const n = r(8, 12), m = r(3, 99); return { q: `2<sup>${n}</sup> − ${m} = ?`, a: 2 ** n - m };
+}
+function showGate(why) {
+  let Q = gateQ(), v = '';
+  $('#lockPanel').innerHTML = `<div class="wtitle" style="color:var(--coral)">👨‍👩‍👧 Dành cho bố mẹ</div>
+    <div class="updMsg" id="lkMsg">${why === 'exit' ? 'Muốn thoát game? ' : ''}Trả lời đúng để mở khóa màn hình:</div>
+    <div class="lkQ" id="lkQ">${Q.q}</div><div class="lkV" id="lkV"></div>
+    <div class="lkPad">${[1, 2, 3, 4, 5, 6, 7, 8, 9, 0].map(d => `<button data-d="${d}">${d}</button>`).join('')}</div>
+    <div class="updRow"><button class="btn gray small" id="lkDel">⌫ Xoá</button><button class="btn small" id="lkGo">✓ Mở khóa</button><button class="btn grape small" id="lkNo">↩ Chơi tiếp</button></div>`;
+  $('#ovLock').classList.add('on');
+  const show = () => { $('#lkV').textContent = v; };
+  $('#lockPanel').querySelectorAll('.lkPad button').forEach(b => b.onclick = () => { AU.sfx('tap'); if (v.length < 5) v += b.dataset.d; show(); });
+  $('#lkDel').onclick = () => { v = v.slice(0, -1); show(); };
+  $('#lkNo').onclick = () => { AU.sfx('tap'); lkHide(); goFull(); };
+  $('#lkGo').onclick = () => {
+    if (+v === Q.a && v !== '') {
+      AU.sfx('tada'); KL.set(false);
+      try { screen.orientation.unlock(); } catch (e) { }
+      $('#lockPanel').innerHTML = `<div class="wtitle" style="color:var(--leaf)">🔓 Đã mở khóa</div>
+        <div class="infoBox">Bố mẹ có thể thoát game bình thường.<small>Muốn khóa lại: bấm “🔓 Khóa màn hình” ở màn hình chính của game.</small></div>
+        <div class="updRow"><button class="btn grape" id="lkOk">👍 Đóng</button><button class="btn gray" id="lkFs">⤢ Thoát toàn màn hình</button></div>`;
+      $('#lkOk').onclick = () => { AU.sfx('tap'); lkHide(); };
+      $('#lkFs').onclick = () => { AU.sfx('tap'); lkHide(); try { (document.exitFullscreen || document.webkitExitFullscreen).call(document); } catch (e) { } };
+      return;
+    }
+    AU.sfx('wrong'); const box = $('#lkV'); box.classList.remove('bad'); void box.offsetWidth; box.classList.add('bad');
+    Q = gateQ(); v = ''; $('#lkQ').innerHTML = Q.q; show(); $('#lkMsg').textContent = '😺 Chưa đúng rồi, thử câu khác nhé:';
+  };
+}
+// Bé lỡ thoát toàn màn hình → mời chạm để chơi tiếp (trình duyệt chỉ cho vào lại toàn màn hình khi có chạm)
+function showResume() {
+  if ($('#ovLock').classList.contains('on')) return;
+  $('#lockPanel').innerHTML = `<div class="wtitle" style="color:var(--grape)">🕷️ Chơi tiếp nào!</div>
+    <div class="updRow" style="margin:14px 0 18px"><button class="btn" id="lkGoOn" style="font-size:34px;padding:14px 48px 10px">▶ Chạm để chơi tiếp</button></div>
+    <button class="btn gray small" id="lkPar">👨‍👩‍👧 Bố mẹ mở khóa</button>`;
+  $('#ovLock').classList.add('on');
+  $('#lkGoOn').onclick = () => { AU.sfx('tap'); goFull(); lkHide(); };
+  $('#lkPar').onclick = () => { AU.sfx('tap'); showGate('exit'); };
+}
+if (UPD.web) {
+  KL.on = !!DB.d.kidLock; KL.paint();
+  $('#lockBtn').onclick = () => { AU.init(); KL.on ? (AU.sfx('tap'), showGate('exit')) : lockOn(); };
+  if (KL.on) { KL.trap(); setTimeout(showResume, 300); }
+  addEventListener('popstate', () => { if (!KL.on) return; KL.trap(); showGate('exit'); });
+  const fsOff = () => { if (KL.on && !(document.fullscreenElement || document.webkitFullscreenElement)) showResume(); };
+  document.addEventListener('fullscreenchange', fsOff); document.addEventListener('webkitfullscreenchange', fsOff);
+  addEventListener('beforeunload', e => { if (KL.on) { e.preventDefault(); e.returnValue = ''; } });
 }
 // Mỗi lần mở game: tự sao lưu dữ liệu và xem có bản mới không (có thì báo + nút 🔄 hiện chấm đỏ)
 if (UPD.api || UPD.web) setTimeout(() => { UPD.backup('mo-game'); UPD.check().then(r => { if (r.ok && r.newer) { $('#updBtn').classList.add('has'); showNewVer(r); } }).catch(() => { }); }, 1500);
