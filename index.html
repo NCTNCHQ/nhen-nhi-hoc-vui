@@ -6,6 +6,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Nhện Nhí Học Vui – Mầm non đến Lớp 5</title>
 <meta name="author" content="Nguyễn Công Trung (congtrung127@gmail.com)">
+<!-- Bộ máy tính bảng: thêm vào màn hình chính như một ứng dụng (cần manifest.json + icon-192.png + icon-512.png cạnh file này) -->
+<link rel="manifest" href="manifest.json">
+<link rel="icon" type="image/png" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<meta name="theme-color" content="#a06cd5">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Nhện Nhí">
+<meta name="application-name" content="Nhện Nhí Học Vui">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&display=swap" rel="stylesheet">
 <style>
@@ -1521,8 +1530,8 @@ function nextGift() { for (const t of [...myThemes(), ...THEME_KEYS]) { const u 
 
 // ---------- Tốc độ đọc ----------
 // ── PHIÊN BẢN: mỗi lần thêm nội dung mới thì TĂNG số này (vd 2.0.0 → 2.1.0) và ghi điều mới vào APP_NOTES ──
-const APP_VER = '2.5.2';
-const APP_NOTES = ["Tự báo khi có phiên bản mới, bấm một nút là cập nhật", "Có nút ⬅️ Trở về ngay trong lúc làm bài","Chọn lớp → chọn môn → bản đồ bài học, có nút Trở về", "Bài chưa học hiện mờ, phải học xong bài trước (và đạt bài kiểm tra từ 8 điểm) mới mở bài sau", "Bản đồ gom bài thành từng hàng theo cụm ôn tập / chủ đề", "Bộ sưu tập Thủy cung, Công viên khủng long, Khu vườn, Lâu đài: mỗi bộ 32 hình","Toán 5 – thêm Chủ đề 5: Một số hình phẳng, chu vi và diện tích (bài 25–29) và bài kiểm tra chủ đề 5","Toán 5 – thêm Chủ đề 4: Các phép tính với số thập phân (bài 19–24) và bài kiểm tra chủ đề 4","Toán 5 – thêm Chủ đề 3: Một số đơn vị đo diện tích (bài 15–18) và bài kiểm tra chủ đề 3","Lớp 5: hình vẽ mới dễ thương, chữ và ô nhập to hơn, không còn chữ bị hình che","Mở Lớp 5 – Toán 5: Chủ đề 1 (Ôn tập và bổ sung) và Chủ đề 2 (Số thập phân), bài 1–14", "Bàn phím số, ô phân số, hình minh họa và gợi ý cách làm", "Bài kiểm tra cuối mỗi chủ đề (10 câu, đạt từ 8 điểm)","Đổi tên thành Nhện Nhí Học Vui (Mầm non đến Lớp 5)", "3 mức tốc độ mới: Chậm, Vừa, Nhanh", "Thêm mục Thông tin tác giả và Cập nhật ứng dụng", "Tự sao lưu dữ liệu học của các bé"];
+const APP_VER = '2.6.0';
+const APP_NOTES = ["Có thêm bộ chạy trên máy tính bảng (mở bằng trình duyệt), sao lưu dữ liệu ra file","Tự báo khi có phiên bản mới, bấm một nút là cập nhật", "Có nút ⬅️ Trở về ngay trong lúc làm bài","Chọn lớp → chọn môn → bản đồ bài học, có nút Trở về", "Bài chưa học hiện mờ, phải học xong bài trước (và đạt bài kiểm tra từ 8 điểm) mới mở bài sau", "Bản đồ gom bài thành từng hàng theo cụm ôn tập / chủ đề", "Bộ sưu tập Thủy cung, Công viên khủng long, Khu vườn, Lâu đài: mỗi bộ 32 hình","Toán 5 – thêm Chủ đề 5: Một số hình phẳng, chu vi và diện tích (bài 25–29) và bài kiểm tra chủ đề 5","Toán 5 – thêm Chủ đề 4: Các phép tính với số thập phân (bài 19–24) và bài kiểm tra chủ đề 4","Toán 5 – thêm Chủ đề 3: Một số đơn vị đo diện tích (bài 15–18) và bài kiểm tra chủ đề 3","Lớp 5: hình vẽ mới dễ thương, chữ và ô nhập to hơn, không còn chữ bị hình che","Mở Lớp 5 – Toán 5: Chủ đề 1 (Ôn tập và bổ sung) và Chủ đề 2 (Số thập phân), bài 1–14", "Bàn phím số, ô phân số, hình minh họa và gợi ý cách làm", "Bài kiểm tra cuối mỗi chủ đề (10 câu, đạt từ 8 điểm)","Đổi tên thành Nhện Nhí Học Vui (Mầm non đến Lớp 5)", "3 mức tốc độ mới: Chậm, Vừa, Nhanh", "Thêm mục Thông tin tác giả và Cập nhật ứng dụng", "Tự sao lưu dữ liệu học của các bé"];
 const SPEEDS = { cham: { ic: '🐢', n: 'Chậm', rate: 1.1, k: 1 }, vua: { ic: '🚶', n: 'Vừa', rate: 1.35, k: .7 }, nhanh: { ic: '🐇', n: 'Nhanh', rate: 1.6, k: .5 } };
 const SPD = () => SPEEDS[(G.p && G.p.speed) || 'vua'] || SPEEDS.vua;
 const D = ms => Math.round(ms * SPD().k);
@@ -1889,7 +1898,7 @@ function startPlayer(p) {
   if (!p.themes || !p.themes.length) p.themes = ['xe'];
   if (!p.grade) p.grade = 'l1';
   G.viewGrade = null; GAR_T = null;
-  DB.d.last = p.id; DB.save(); AU.init(); AU.sfx('ok');
+  DB.d.last = p.id; DB.save(); AU.init(); AU.sfx('ok'); goFull();
   buildScene(thKey());
   showGrades();
   later(() => VOICE.say(`Chào ${p.name}! Hôm nay con học lớp mấy nhỉ?`), 400);
@@ -2364,17 +2373,60 @@ $('#homeRank').onclick = () => { AU.init(); AU.sfx('tap'); showRank(); };
 const UPD = (() => {
   const q = new URLSearchParams(location.search), port = q.get('port'), tk = q.get('tk') || '';
   const api = port ? `http://127.0.0.1:${port}` : null;
+  // Bộ máy tính bảng: game mở qua trang web (GitHub Pages) → tự đọc bản mới trên chính trang đó
+  const web = !api && /^https?:$/.test(location.protocol);
   const call = (path, body) => fetch(`${api}/${path}${path.includes('?') ? '&' : '?'}tk=${encodeURIComponent(tk)}`,
     body ? { method: 'POST', body } : {}).then(r => r.json());
+  const webCheck = () => fetch(location.pathname + '?t=' + Date.now(), { cache: 'no-store' }).then(r => r.text()).then(t => {
+    const v = (t.match(/const APP_VER = '([^']+)'/) || [])[1];
+    if (!v) return { ok: false, err: 'không đọc được bản trên mạng' };
+    let notes = []; try { notes = JSON.parse((t.match(/const APP_NOTES = (\[.*?\]);/) || [])[1] || '[]'); } catch (e) { }
+    const a = v.split('.').map(Number), b = APP_VER.split('.').map(Number);
+    let newer = false;
+    for (let i = 0; i < Math.max(a.length, b.length); i++) if ((a[i] || 0) !== (b[i] || 0)) { newer = (a[i] || 0) > (b[i] || 0); break; }
+    return { ok: true, ver: v, newer, notes };
+  }).catch(() => ({ ok: false, err: 'không kết nối được mạng' }));
   return {
-    api, info: null,
-    check() { return api ? call('check').then(r => (this.info = r)) : Promise.reject(new Error('noapi')); },
-    backup(why) { if (!api) return Promise.resolve(null); DB.save(); return call('backup?why=' + why, localStorage.getItem(DB.k) || '{}').catch(() => null); },
-    update() { return call('update'); },
+    api, web, info: null,
+    check() { return api ? call('check').then(r => (this.info = r)) : web ? webCheck().then(r => (this.info = r)) : Promise.reject(new Error('noapi')); },
+    backup(why) { if (web) { DB.save(); return Promise.resolve({ ok: true }); } if (!api) return Promise.resolve(null); DB.save(); return call('backup?why=' + why, localStorage.getItem(DB.k) || '{}').catch(() => null); },
+    update() { return web ? Promise.resolve({ ok: true, ver: (this.info || {}).ver || APP_VER }) : call('update'); },
+    reload() { if (web) location.replace(location.pathname + '?v=' + encodeURIComponent((this.info || {}).ver || Date.now())); else location.reload(); },
     list() { return call('backups'); },
     restore(f) { return call('restore?f=' + encodeURIComponent(f)); },
   };
 })();
+// Bộ máy tính bảng: xin trình duyệt giữ dữ liệu lâu dài, mở toàn màn hình khi bé bắt đầu chơi
+if (UPD.web && navigator.storage && navigator.storage.persist) navigator.storage.persist().catch(() => { });
+function goFull() {
+  if (!UPD.web || document.fullscreenElement || matchMedia('(display-mode: fullscreen), (display-mode: standalone)').matches) return;
+  const el = document.documentElement, f = el.requestFullscreen || el.webkitRequestFullscreen;
+  try { const p = f && f.call(el); if (p && p.catch) p.catch(() => { }); } catch (e) { }
+}
+// Sao lưu ra file / khôi phục từ file (dùng cho máy tính bảng)
+function saveFile() {
+  DB.save();
+  const d = new Date(), pad = n => String(n).padStart(2, '0');
+  const name = `NhenNhi-saoluu-${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}.json`;
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(new Blob([localStorage.getItem(DB.k) || '{}'], { type: 'application/json' }));
+  a.download = name; document.body.appendChild(a); a.click();
+  setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 2000);
+  return name;
+}
+function loadFile(done) {
+  const inp = document.createElement('input'); inp.type = 'file'; inp.accept = '.json,application/json';
+  inp.onchange = () => {
+    const f = inp.files[0]; if (!f) return;
+    f.text().then(t => {
+      const x = JSON.parse(t);
+      if (!x || !Array.isArray(x.players)) throw new Error('File này không phải file sao lưu của game');
+      if (!confirm(`Khôi phục ${x.players.length} học sinh từ file "${f.name}"? Dữ liệu hiện tại trên máy sẽ được thay thế.`)) return;
+      localStorage.setItem(DB.k, JSON.stringify(x)); location.reload();
+    }).catch(e => done('😿 ' + (e.message || 'File bị hỏng')));
+  };
+  inp.click();
+}
 const infoClose = () => { AU.sfx('tap'); $('#ovInfo').classList.remove('on'); };
 function showAuthor() {
   $('#infoPanel').innerHTML = `<div class="wtitle" style="color:var(--grape)">ℹ️ Thông tin ứng dụng</div>
@@ -2391,8 +2443,8 @@ function showUpdate(auto) {
     <div class="updRow"><button class="btn gray small" id="uBk">💾 Bản sao lưu</button><button class="btn grape small" id="uOk">👍 Đóng</button></div>`;
   $('#ovInfo').classList.add('on'); $('#uOk').onclick = infoClose;
   const msg = t => { $('#uMsg').innerHTML = t; }, body = h => { $('#uBody').innerHTML = h; };
-  $('#uBk').onclick = () => { AU.sfx('tap'); showBackups(); };
-  if (!UPD.api) { msg('⚠️ Hãy mở game bằng file <b>NhenNhiHocVui.exe</b> để kiểm tra cập nhật.'); $('#uBk').style.display = 'none'; return; }
+  $('#uBk').onclick = () => { AU.sfx('tap'); UPD.web ? showBackupsWeb() : showBackups(); };
+  if (!UPD.api && !UPD.web) { msg('⚠️ Hãy mở game bằng file <b>NhenNhiHocVui.exe</b> để kiểm tra cập nhật.'); $('#uBk').style.display = 'none'; return; }
   UPD.check().then(r => {
     if (!r.ok) return msg('📡 Chưa kiểm tra được: ' + esc(r.err || 'không kết nối được') + '. Hãy kiểm tra mạng rồi thử lại.');
     if (!r.newer) { $('#updBtn').classList.remove('has'); return msg(`✅ Bạn đang dùng bản mới nhất (${esc(r.ver)}).`); }
@@ -2407,11 +2459,24 @@ function showUpdate(auto) {
       }).then(u => {
         if (!u.ok) throw new Error(u.err || 'Tải bản mới bị lỗi');
         body(''); msg(`🎉 Đã cập nhật lên bản <b>${esc(u.ver)}</b>! Đang mở lại…`); AU.sfx('tada');
-        setTimeout(() => location.reload(), 1500);
+        setTimeout(() => UPD.reload(), 1500);
       }).catch(e => { msg('😿 ' + esc(e.message)); $('#uGo').disabled = false; });
     };
     if (auto) $('#uGo').click();
   }).catch(() => msg('📡 Không liên lạc được với trình mở game. Hãy tắt game rồi mở lại bằng NhenNhiHocVui.exe.'));
+}
+// Máy tính bảng: dữ liệu nằm trong trình duyệt → cho bố mẹ lưu ra file và khôi phục từ file
+function showBackupsWeb() {
+  $('#infoPanel').innerHTML = `<div class="wtitle" style="color:var(--grape)">💾 Sao lưu dữ liệu</div>
+    <div class="infoBox">Dữ liệu học của các bé đang lưu trong trình duyệt của máy này.
+      <small>Đừng xoá dữ liệu trình duyệt. Thỉnh thoảng nên lưu ra file để phòng khi đổi máy hay cài lại.</small></div>
+    <div class="updMsg" id="bMsg"></div>
+    <div class="updRow" style="margin-bottom:14px"><button class="btn" id="wSave">💾 Lưu ra file</button><button class="btn blue" id="wLoad">📂 Khôi phục từ file</button></div>
+    <div class="updRow"><button class="btn gray small" id="bBack">⬅️ Quay lại</button><button class="btn grape small" id="bOk">👍 Đóng</button></div>`;
+  $('#ovInfo').classList.add('on'); $('#bOk').onclick = infoClose; $('#bBack').onclick = () => { AU.sfx('tap'); showUpdate(); };
+  const msg = t => { $('#bMsg').innerHTML = t; };
+  $('#wSave').onclick = () => { AU.sfx('tap'); const n = saveFile(); msg(`✅ Đã lưu file <b>${esc(n)}</b> vào mục Tải xuống của máy.`); };
+  $('#wLoad').onclick = () => { AU.sfx('tap'); loadFile(msg); };
 }
 function showBackups() {
   const P = $('#infoPanel');
@@ -2447,7 +2512,7 @@ function showNewVer(r) {
   $('#nvGo').onclick = () => { AU.init(); AU.sfx('tap'); showUpdate(true); };
 }
 // Mỗi lần mở game: tự sao lưu dữ liệu và xem có bản mới không (có thì báo + nút 🔄 hiện chấm đỏ)
-if (UPD.api) setTimeout(() => { UPD.backup('mo-game'); UPD.check().then(r => { if (r.ok && r.newer) { $('#updBtn').classList.add('has'); showNewVer(r); } }).catch(() => { }); }, 1500);
+if (UPD.api || UPD.web) setTimeout(() => { UPD.backup('mo-game'); UPD.check().then(r => { if (r.ok && r.newer) { $('#updBtn').classList.add('has'); showNewVer(r); } }).catch(() => { }); }, 1500);
 
 /* ═════════════════ HÌNH VẼ PHỤ ═════════════════ */
 const rowsOf = n => Math.ceil(n / 5), hcap = n => 176 / Math.max(1, rowsOf(n)) / .78 - 6;
