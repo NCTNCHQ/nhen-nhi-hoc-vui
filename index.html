@@ -1551,8 +1551,8 @@ function nextGift() { for (const t of [...myThemes(), ...THEME_KEYS]) { const u 
 
 // ---------- Tốc độ đọc ----------
 // ── PHIÊN BẢN: mỗi lần thêm nội dung mới thì TĂNG số này (vd 2.0.0 → 2.1.0) và ghi điều mới vào APP_NOTES ──
-const APP_VER = '2.7.3';
-const APP_NOTES = ["Giọng đọc qua mạng ổn định hơn (tải trước, tự thử lại, báo khi mạng yếu); bảng ℹ️ cho biết đang dùng giọng nào", "Sửa lỗi: đang khóa màn hình vẫn bấm Cập nhật ngay được", "Máy không có giọng tiếng Việt (vd máy tính bảng Huawei) thì tự đọc bằng giọng qua mạng","Máy tính bảng: nút 🔒 Khóa màn hình (toàn màn hình, nằm ngang), mở khóa bằng câu hỏi dành cho bố mẹ","Đổi phông chữ: chữ a, g viết kiểu chữ in như sách giáo khoa Việt Nam (dùng được cả khi không có mạng)","Có thêm bộ chạy trên máy tính bảng (mở bằng trình duyệt), sao lưu dữ liệu ra file","Tự báo khi có phiên bản mới, bấm một nút là cập nhật", "Có nút ⬅️ Trở về ngay trong lúc làm bài","Chọn lớp → chọn môn → bản đồ bài học, có nút Trở về", "Bài chưa học hiện mờ, phải học xong bài trước (và đạt bài kiểm tra từ 8 điểm) mới mở bài sau", "Bản đồ gom bài thành từng hàng theo cụm ôn tập / chủ đề", "Bộ sưu tập Thủy cung, Công viên khủng long, Khu vườn, Lâu đài: mỗi bộ 32 hình","Toán 5 – thêm Chủ đề 5: Một số hình phẳng, chu vi và diện tích (bài 25–29) và bài kiểm tra chủ đề 5","Toán 5 – thêm Chủ đề 4: Các phép tính với số thập phân (bài 19–24) và bài kiểm tra chủ đề 4","Toán 5 – thêm Chủ đề 3: Một số đơn vị đo diện tích (bài 15–18) và bài kiểm tra chủ đề 3","Lớp 5: hình vẽ mới dễ thương, chữ và ô nhập to hơn, không còn chữ bị hình che","Mở Lớp 5 – Toán 5: Chủ đề 1 (Ôn tập và bổ sung) và Chủ đề 2 (Số thập phân), bài 1–14", "Bàn phím số, ô phân số, hình minh họa và gợi ý cách làm", "Bài kiểm tra cuối mỗi chủ đề (10 câu, đạt từ 8 điểm)","Đổi tên thành Nhện Nhí Học Vui (Mầm non đến Lớp 5)", "3 mức tốc độ mới: Chậm, Vừa, Nhanh", "Thêm mục Thông tin tác giả và Cập nhật ứng dụng", "Tự sao lưu dữ liệu học của các bé"];
+const APP_VER = '2.7.4';
+const APP_NOTES = ["Máy tính bảng: bàn phím không tự bật lên ở ô nhập tên và tự đóng khi sang màn hình khác","Giọng đọc qua mạng ổn định hơn (tải trước, tự thử lại, báo khi mạng yếu); bảng ℹ️ cho biết đang dùng giọng nào", "Sửa lỗi: đang khóa màn hình vẫn bấm Cập nhật ngay được", "Máy không có giọng tiếng Việt (vd máy tính bảng Huawei) thì tự đọc bằng giọng qua mạng","Máy tính bảng: nút 🔒 Khóa màn hình (toàn màn hình, nằm ngang), mở khóa bằng câu hỏi dành cho bố mẹ","Đổi phông chữ: chữ a, g viết kiểu chữ in như sách giáo khoa Việt Nam (dùng được cả khi không có mạng)","Có thêm bộ chạy trên máy tính bảng (mở bằng trình duyệt), sao lưu dữ liệu ra file","Tự báo khi có phiên bản mới, bấm một nút là cập nhật", "Có nút ⬅️ Trở về ngay trong lúc làm bài","Chọn lớp → chọn môn → bản đồ bài học, có nút Trở về", "Bài chưa học hiện mờ, phải học xong bài trước (và đạt bài kiểm tra từ 8 điểm) mới mở bài sau", "Bản đồ gom bài thành từng hàng theo cụm ôn tập / chủ đề", "Bộ sưu tập Thủy cung, Công viên khủng long, Khu vườn, Lâu đài: mỗi bộ 32 hình","Toán 5 – thêm Chủ đề 5: Một số hình phẳng, chu vi và diện tích (bài 25–29) và bài kiểm tra chủ đề 5","Toán 5 – thêm Chủ đề 4: Các phép tính với số thập phân (bài 19–24) và bài kiểm tra chủ đề 4","Toán 5 – thêm Chủ đề 3: Một số đơn vị đo diện tích (bài 15–18) và bài kiểm tra chủ đề 3","Lớp 5: hình vẽ mới dễ thương, chữ và ô nhập to hơn, không còn chữ bị hình che","Mở Lớp 5 – Toán 5: Chủ đề 1 (Ôn tập và bổ sung) và Chủ đề 2 (Số thập phân), bài 1–14", "Bàn phím số, ô phân số, hình minh họa và gợi ý cách làm", "Bài kiểm tra cuối mỗi chủ đề (10 câu, đạt từ 8 điểm)","Đổi tên thành Nhện Nhí Học Vui (Mầm non đến Lớp 5)", "3 mức tốc độ mới: Chậm, Vừa, Nhanh", "Thêm mục Thông tin tác giả và Cập nhật ứng dụng", "Tự sao lưu dữ liệu học của các bé"];
 const SPEEDS = { cham: { ic: '🐢', n: 'Chậm', rate: 1.1, k: 1 }, vua: { ic: '🚶', n: 'Vừa', rate: 1.35, k: .7 }, nhanh: { ic: '🐇', n: 'Nhanh', rate: 1.6, k: .5 } };
 const SPD = () => SPEEDS[(G.p && G.p.speed) || 'vua'] || SPEEDS.vua;
 const D = ms => Math.round(ms * SPD().k);
@@ -1889,6 +1889,7 @@ function buildScene(t = 'xe') {
 /* ═════════════════ ĐIỀU HƯỚNG ═════════════════ */
 function show(id) {
   TOKEN++; VOICE.seq = 0;
+  if (document.activeElement && document.activeElement.blur) document.activeElement.blur();   // đóng bàn phím ảo khi đổi màn hình
   document.querySelectorAll('.scr').forEach(s => s.classList.toggle('on', s.id === id));
   document.querySelectorAll('.ov').forEach(o => o.classList.remove('on'));
   if ($('#sun')) $('#sun').style.display = (id === 'home' || id === 'create') ? '' : 'none';
@@ -1932,7 +1933,8 @@ function showCreate(p) {
     themes: p && p.themes && p.themes.length ? [...p.themes] : [], speed: p ? p.speed || 'vua' : 'vua' };
   let page = 1;
   $('#cTitle').textContent = p ? 'Hồ sơ của bé ✏️' : 'Chào bạn mới! ✨';
-  const inp = $('#nameInput'); inp.value = p ? p.name : ''; setTimeout(() => inp.focus(), 100);
+  // máy cảm ứng (máy tính bảng): không tự bật bàn phím, bố mẹ chạm vào ô tên mới hiện bàn phím
+  const inp = $('#nameInput'); inp.value = p ? p.name : ''; if (!matchMedia('(pointer: coarse)').matches) setTimeout(() => inp.focus(), 100);
   $('#cErr').textContent = '';
   const chips = (el, items, cur, onPick) => {
     el.innerHTML = items.map(([v, label]) => `<button class="chipb ${v === cur ? 'on' : ''}" data-v="${v}">${label}</button>`).join('');
@@ -1965,7 +1967,7 @@ function showCreate(p) {
   };
   const go = n => {
     if (n === 2 && !name()) { $('#cErr').textContent = 'Bé hãy nhập tên của mình nhé! 😊'; AU.sfx('wrong'); inp.focus(); return; }
-    page = n; $('#cErr').textContent = '';
+    page = n; $('#cErr').textContent = ''; if (n === 2) inp.blur();
     $('#cp1').style.display = n === 1 ? '' : 'none'; $('#cp2').style.display = n === 2 ? '' : 'none';
     const b = $('#cBtns'); b.innerHTML = '';
     const mk = (t, cls, fn) => { const x = document.createElement('button'); x.className = 'btn ' + cls; x.innerHTML = t; x.onclick = fn; b.appendChild(x); };
