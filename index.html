@@ -1554,8 +1554,8 @@ function nextGift() { for (const t of [...myThemes(), ...THEME_KEYS]) { const u 
 
 // ---------- Tốc độ đọc ----------
 // ── PHIÊN BẢN: mỗi lần thêm nội dung mới thì TĂNG số này (vd 2.0.0 → 2.1.0) và ghi điều mới vào APP_NOTES ──
-const APP_VER = '2.8.0';
-const APP_NOTES = ["Bảng xếp hạng chung: các bé ở nhiều máy cùng xếp hạng (bố mẹ nhập mã gia đình một lần trên mỗi máy)", "Máy tính bảng: cập nhật xong, thoát ra mở lại vẫn giữ bản mới", "Câu hỏi mở khóa / thoát game là phép tính thường dưới 100 (vd 37 + 48, 85 − 29, 7 × 9)", "Máy tính bảng: bàn phím không tự bật lên ở ô nhập tên và tự đóng khi sang màn hình khác", "Giọng đọc qua mạng ổn định hơn (tải trước, tự thử lại, báo khi mạng yếu); bảng ℹ️ cho biết đang dùng giọng nào", "Sửa lỗi: đang khóa màn hình vẫn bấm Cập nhật ngay được", "Máy không có giọng tiếng Việt (vd máy tính bảng Huawei) thì tự đọc bằng giọng qua mạng","Máy tính bảng: nút 🔒 Khóa màn hình (toàn màn hình, nằm ngang), mở khóa bằng câu hỏi dành cho bố mẹ","Đổi phông chữ: chữ a, g viết kiểu chữ in như sách giáo khoa Việt Nam (dùng được cả khi không có mạng)","Có thêm bộ chạy trên máy tính bảng (mở bằng trình duyệt), sao lưu dữ liệu ra file","Tự báo khi có phiên bản mới, bấm một nút là cập nhật", "Có nút ⬅️ Trở về ngay trong lúc làm bài","Chọn lớp → chọn môn → bản đồ bài học, có nút Trở về", "Bài chưa học hiện mờ, phải học xong bài trước (và đạt bài kiểm tra từ 8 điểm) mới mở bài sau", "Bản đồ gom bài thành từng hàng theo cụm ôn tập / chủ đề", "Bộ sưu tập Thủy cung, Công viên khủng long, Khu vườn, Lâu đài: mỗi bộ 32 hình","Toán 5 – thêm Chủ đề 5: Một số hình phẳng, chu vi và diện tích (bài 25–29) và bài kiểm tra chủ đề 5","Toán 5 – thêm Chủ đề 4: Các phép tính với số thập phân (bài 19–24) và bài kiểm tra chủ đề 4","Toán 5 – thêm Chủ đề 3: Một số đơn vị đo diện tích (bài 15–18) và bài kiểm tra chủ đề 3","Lớp 5: hình vẽ mới dễ thương, chữ và ô nhập to hơn, không còn chữ bị hình che","Mở Lớp 5 – Toán 5: Chủ đề 1 (Ôn tập và bổ sung) và Chủ đề 2 (Số thập phân), bài 1–14", "Bàn phím số, ô phân số, hình minh họa và gợi ý cách làm", "Bài kiểm tra cuối mỗi chủ đề (10 câu, đạt từ 8 điểm)","Đổi tên thành Nhện Nhí Học Vui (Mầm non đến Lớp 5)", "3 mức tốc độ mới: Chậm, Vừa, Nhanh", "Thêm mục Thông tin tác giả và Cập nhật ứng dụng", "Tự sao lưu dữ liệu học của các bé"];
+const APP_VER = '2.8.1';
+const APP_NOTES = ["Bảng xếp hạng chung: ô ⚙️ Bảng chung nhận luôn link riêng (tiện cho iPhone / máy đã thêm ra màn hình chính)", "Bảng xếp hạng chung: các bé ở nhiều máy cùng xếp hạng (bố mẹ nhập mã gia đình một lần trên mỗi máy)", "Máy tính bảng: cập nhật xong, thoát ra mở lại vẫn giữ bản mới", "Câu hỏi mở khóa / thoát game là phép tính thường dưới 100 (vd 37 + 48, 85 − 29, 7 × 9)", "Máy tính bảng: bàn phím không tự bật lên ở ô nhập tên và tự đóng khi sang màn hình khác", "Giọng đọc qua mạng ổn định hơn (tải trước, tự thử lại, báo khi mạng yếu); bảng ℹ️ cho biết đang dùng giọng nào", "Sửa lỗi: đang khóa màn hình vẫn bấm Cập nhật ngay được", "Máy không có giọng tiếng Việt (vd máy tính bảng Huawei) thì tự đọc bằng giọng qua mạng","Máy tính bảng: nút 🔒 Khóa màn hình (toàn màn hình, nằm ngang), mở khóa bằng câu hỏi dành cho bố mẹ","Đổi phông chữ: chữ a, g viết kiểu chữ in như sách giáo khoa Việt Nam (dùng được cả khi không có mạng)","Có thêm bộ chạy trên máy tính bảng (mở bằng trình duyệt), sao lưu dữ liệu ra file","Tự báo khi có phiên bản mới, bấm một nút là cập nhật", "Có nút ⬅️ Trở về ngay trong lúc làm bài","Chọn lớp → chọn môn → bản đồ bài học, có nút Trở về", "Bài chưa học hiện mờ, phải học xong bài trước (và đạt bài kiểm tra từ 8 điểm) mới mở bài sau", "Bản đồ gom bài thành từng hàng theo cụm ôn tập / chủ đề", "Bộ sưu tập Thủy cung, Công viên khủng long, Khu vườn, Lâu đài: mỗi bộ 32 hình","Toán 5 – thêm Chủ đề 5: Một số hình phẳng, chu vi và diện tích (bài 25–29) và bài kiểm tra chủ đề 5","Toán 5 – thêm Chủ đề 4: Các phép tính với số thập phân (bài 19–24) và bài kiểm tra chủ đề 4","Toán 5 – thêm Chủ đề 3: Một số đơn vị đo diện tích (bài 15–18) và bài kiểm tra chủ đề 3","Lớp 5: hình vẽ mới dễ thương, chữ và ô nhập to hơn, không còn chữ bị hình che","Mở Lớp 5 – Toán 5: Chủ đề 1 (Ôn tập và bổ sung) và Chủ đề 2 (Số thập phân), bài 1–14", "Bàn phím số, ô phân số, hình minh họa và gợi ý cách làm", "Bài kiểm tra cuối mỗi chủ đề (10 câu, đạt từ 8 điểm)","Đổi tên thành Nhện Nhí Học Vui (Mầm non đến Lớp 5)", "3 mức tốc độ mới: Chậm, Vừa, Nhanh", "Thêm mục Thông tin tác giả và Cập nhật ứng dụng", "Tự sao lưu dữ liệu học của các bé"];
 const SPEEDS = { cham: { ic: '🐢', n: 'Chậm', rate: 1.1, k: 1 }, vua: { ic: '🚶', n: 'Vừa', rate: 1.35, k: .7 }, nhanh: { ic: '🐇', n: 'Nhanh', rate: 1.6, k: .5 } };
 const SPD = () => SPEEDS[(G.p && G.p.speed) || 'vua'] || SPEEDS.vua;
 const D = ms => Math.round(ms * SPD().k);
@@ -2432,7 +2432,11 @@ const rankOf = id => standings().findIndex(x => x.p.id === id) + 1;
    Bé nào tạo hồ sơ là tự động có trong bảng chung; game tự gửi điểm (do game tính) sau mỗi bài khi có mạng. */
 const LB = {
   get cfg() { return DB.d.lbc || null; },
-  parse(code) { const m = String(code || '').trim().match(/^NN1\|(https:\/\/script\.google\.com\/[^|\s]+|http:\/\/127\.0\.0\.1:\d+\/[^|\s]*)\|([A-Za-z0-9]{20,})$/); return m ? { u: m[1], k: m[2] } : null; },
+  parse(code) {
+    code = String(code || '').trim();
+    const L = code.match(/[#&]lb=([A-Za-z0-9_-]+)/);   // dán cả LINK RIÊNG cũng được
+    if (L) { try { code = decodeURIComponent(escape(atob(L[1].replace(/-/g, '+').replace(/_/g, '/')))); } catch (e) { return null; } }
+    const m = code.trim().match(/^NN1\|(https:\/\/script\.google\.com\/[^|\s]+|http:\/\/127\.0\.0\.1:\d+\/[^|\s]*)\|([A-Za-z0-9]{20,})$/); return m ? { u: m[1], k: m[2] } : null; },
   call(body, ms = 15000) {
     const c = this.cfg; if (!c) return Promise.reject(new Error('chưa có mã gia đình'));
     const ctl = window.AbortController ? new AbortController() : null; const t = setTimeout(() => ctl && ctl.abort(), ms);
@@ -2561,9 +2565,9 @@ function showLBSet() {
   const c = LB.cfg;
   $('#infoPanel').innerHTML = `<div class="wtitle" style="color:var(--sky)">🌏 Bảng xếp hạng chung</div>
     <div class="infoBox">${c ? '✅ Máy này <b>đã kết nối</b> bảng xếp hạng chung.' : '⚪ Máy này <b>chưa kết nối</b>.'}
-      <small>Dán <b>mã gia đình</b> (lấy trong Google Trang tính: menu 🕷️ Nhện Nhí → Lấy mã gia đình). Mã chỉ lưu trên máy này.
+      <small>Dán <b>link riêng</b> bố mẹ được gửi (hoặc <b>mã gia đình</b> NN1|…). Mã chỉ lưu trên máy này.
       Các bé tạo hồ sơ trên máy sẽ tự có trong bảng chung.</small></div>
-    <textarea id="lbCode" class="lbCode" placeholder="NN1|https://script.google.com/…|…" autocomplete="off" spellcheck="false"></textarea>
+    <textarea id="lbCode" class="lbCode" placeholder="Dán link riêng: https://nctnchq.github.io/nhen-nhi-hoc-vui/#lb=…" autocomplete="off" spellcheck="false"></textarea>
     <div class="updMsg" id="lbMsg"></div>
     <div class="updRow"><button class="btn small" id="lbSave">💾 Lưu & kiểm tra</button>${c ? '<button class="btn gray small" id="lbDel">🗑️ Gỡ kết nối</button>' : ''}<button class="btn grape small" id="lbOk">👍 Đóng</button></div>`;
   $('#ovInfo').classList.add('on');
@@ -2572,7 +2576,7 @@ function showLBSet() {
   if (c) $('#lbDel').onclick = () => { if (!confirm('Gỡ kết nối bảng xếp hạng chung trên máy này?')) return; delete DB.d.lbc; DB.save(); showLBSet(); };
   $('#lbSave').onclick = () => {
     const cfg = LB.parse($('#lbCode').value);
-    if (!cfg) return msg('😿 Mã chưa đúng. Mã phải bắt đầu bằng <b>NN1|https://script.google.com/</b>. Hãy sao chép lại toàn bộ dòng mã.');
+    if (!cfg) return msg('😿 Chưa đúng. Hãy sao chép lại <b>toàn bộ link riêng</b> (có đoạn <b>#lb=</b>) hoặc mã gia đình rồi dán vào.');
     const old = DB.d.lbc; DB.d.lbc = cfg; msg('⏳ Đang kiểm tra kết nối…');
     LB.call({ op: 'list' }).then(r => {
       if (!r || !r.ok) throw new Error(r && r.err || 'lỗi');
