@@ -341,6 +341,9 @@ svg.build{width:420px;height:270px}
 .rtab td.nm svg{width:40px;height:40px}
 .rtab tr.me td{background:#fff3c4}
 .rmsg{font-size:24px;font-weight:800;color:var(--grape);margin:6px 0}
+.rtabs{display:flex;gap:10px;justify-content:center;margin:2px 0 8px}.rtabs .mtab.on{background:var(--sun)}
+.rtab td.gr{font-size:16px;color:#7a6f99;white-space:nowrap}.rtab .here{font-size:15px}
+.lbCode{width:100%;height:84px;border:4px solid #c9bfe6;border-radius:16px;padding:8px 12px;font:600 15px/1.35 Consolas,monospace;color:var(--ink);background:#f6f2ff;resize:none;user-select:text;-webkit-user-select:text}
 .mc.hop svg{animation:hop .5s}
 #web{position:absolute;inset:0;width:1200px;height:750px;pointer-events:none;z-index:8}
 .mascot-hang{position:absolute;left:12px;top:84px;width:110px;transform-origin:55px 0;animation:sway 3s ease-in-out infinite;z-index:7;pointer-events:none}
@@ -1551,8 +1554,8 @@ function nextGift() { for (const t of [...myThemes(), ...THEME_KEYS]) { const u 
 
 // ---------- Tốc độ đọc ----------
 // ── PHIÊN BẢN: mỗi lần thêm nội dung mới thì TĂNG số này (vd 2.0.0 → 2.1.0) và ghi điều mới vào APP_NOTES ──
-const APP_VER = '2.7.7';
-const APP_NOTES = ["Máy tính bảng: cập nhật xong, thoát ra mở lại vẫn giữ bản mới", "Câu hỏi mở khóa / thoát game là phép tính thường dưới 100 (vd 37 + 48, 85 − 29, 7 × 9)", "Máy tính bảng: bàn phím không tự bật lên ở ô nhập tên và tự đóng khi sang màn hình khác", "Giọng đọc qua mạng ổn định hơn (tải trước, tự thử lại, báo khi mạng yếu); bảng ℹ️ cho biết đang dùng giọng nào", "Sửa lỗi: đang khóa màn hình vẫn bấm Cập nhật ngay được", "Máy không có giọng tiếng Việt (vd máy tính bảng Huawei) thì tự đọc bằng giọng qua mạng","Máy tính bảng: nút 🔒 Khóa màn hình (toàn màn hình, nằm ngang), mở khóa bằng câu hỏi dành cho bố mẹ","Đổi phông chữ: chữ a, g viết kiểu chữ in như sách giáo khoa Việt Nam (dùng được cả khi không có mạng)","Có thêm bộ chạy trên máy tính bảng (mở bằng trình duyệt), sao lưu dữ liệu ra file","Tự báo khi có phiên bản mới, bấm một nút là cập nhật", "Có nút ⬅️ Trở về ngay trong lúc làm bài","Chọn lớp → chọn môn → bản đồ bài học, có nút Trở về", "Bài chưa học hiện mờ, phải học xong bài trước (và đạt bài kiểm tra từ 8 điểm) mới mở bài sau", "Bản đồ gom bài thành từng hàng theo cụm ôn tập / chủ đề", "Bộ sưu tập Thủy cung, Công viên khủng long, Khu vườn, Lâu đài: mỗi bộ 32 hình","Toán 5 – thêm Chủ đề 5: Một số hình phẳng, chu vi và diện tích (bài 25–29) và bài kiểm tra chủ đề 5","Toán 5 – thêm Chủ đề 4: Các phép tính với số thập phân (bài 19–24) và bài kiểm tra chủ đề 4","Toán 5 – thêm Chủ đề 3: Một số đơn vị đo diện tích (bài 15–18) và bài kiểm tra chủ đề 3","Lớp 5: hình vẽ mới dễ thương, chữ và ô nhập to hơn, không còn chữ bị hình che","Mở Lớp 5 – Toán 5: Chủ đề 1 (Ôn tập và bổ sung) và Chủ đề 2 (Số thập phân), bài 1–14", "Bàn phím số, ô phân số, hình minh họa và gợi ý cách làm", "Bài kiểm tra cuối mỗi chủ đề (10 câu, đạt từ 8 điểm)","Đổi tên thành Nhện Nhí Học Vui (Mầm non đến Lớp 5)", "3 mức tốc độ mới: Chậm, Vừa, Nhanh", "Thêm mục Thông tin tác giả và Cập nhật ứng dụng", "Tự sao lưu dữ liệu học của các bé"];
+const APP_VER = '2.8.0';
+const APP_NOTES = ["Bảng xếp hạng chung: các bé ở nhiều máy cùng xếp hạng (bố mẹ nhập mã gia đình một lần trên mỗi máy)", "Máy tính bảng: cập nhật xong, thoát ra mở lại vẫn giữ bản mới", "Câu hỏi mở khóa / thoát game là phép tính thường dưới 100 (vd 37 + 48, 85 − 29, 7 × 9)", "Máy tính bảng: bàn phím không tự bật lên ở ô nhập tên và tự đóng khi sang màn hình khác", "Giọng đọc qua mạng ổn định hơn (tải trước, tự thử lại, báo khi mạng yếu); bảng ℹ️ cho biết đang dùng giọng nào", "Sửa lỗi: đang khóa màn hình vẫn bấm Cập nhật ngay được", "Máy không có giọng tiếng Việt (vd máy tính bảng Huawei) thì tự đọc bằng giọng qua mạng","Máy tính bảng: nút 🔒 Khóa màn hình (toàn màn hình, nằm ngang), mở khóa bằng câu hỏi dành cho bố mẹ","Đổi phông chữ: chữ a, g viết kiểu chữ in như sách giáo khoa Việt Nam (dùng được cả khi không có mạng)","Có thêm bộ chạy trên máy tính bảng (mở bằng trình duyệt), sao lưu dữ liệu ra file","Tự báo khi có phiên bản mới, bấm một nút là cập nhật", "Có nút ⬅️ Trở về ngay trong lúc làm bài","Chọn lớp → chọn môn → bản đồ bài học, có nút Trở về", "Bài chưa học hiện mờ, phải học xong bài trước (và đạt bài kiểm tra từ 8 điểm) mới mở bài sau", "Bản đồ gom bài thành từng hàng theo cụm ôn tập / chủ đề", "Bộ sưu tập Thủy cung, Công viên khủng long, Khu vườn, Lâu đài: mỗi bộ 32 hình","Toán 5 – thêm Chủ đề 5: Một số hình phẳng, chu vi và diện tích (bài 25–29) và bài kiểm tra chủ đề 5","Toán 5 – thêm Chủ đề 4: Các phép tính với số thập phân (bài 19–24) và bài kiểm tra chủ đề 4","Toán 5 – thêm Chủ đề 3: Một số đơn vị đo diện tích (bài 15–18) và bài kiểm tra chủ đề 3","Lớp 5: hình vẽ mới dễ thương, chữ và ô nhập to hơn, không còn chữ bị hình che","Mở Lớp 5 – Toán 5: Chủ đề 1 (Ôn tập và bổ sung) và Chủ đề 2 (Số thập phân), bài 1–14", "Bàn phím số, ô phân số, hình minh họa và gợi ý cách làm", "Bài kiểm tra cuối mỗi chủ đề (10 câu, đạt từ 8 điểm)","Đổi tên thành Nhện Nhí Học Vui (Mầm non đến Lớp 5)", "3 mức tốc độ mới: Chậm, Vừa, Nhanh", "Thêm mục Thông tin tác giả và Cập nhật ứng dụng", "Tự sao lưu dữ liệu học của các bé"];
 const SPEEDS = { cham: { ic: '🐢', n: 'Chậm', rate: 1.1, k: 1 }, vua: { ic: '🚶', n: 'Vừa', rate: 1.35, k: .7 }, nhanh: { ic: '🐇', n: 'Nhanh', rate: 1.6, k: .5 } };
 const SPD = () => SPEEDS[(G.p && G.p.speed) || 'vua'] || SPEEDS.vua;
 const D = ms => Math.round(ms * SPD().k);
@@ -1838,7 +1841,7 @@ const DB = {
 };
 DB.load(); AU.music = DB.d.music !== false; AU.voice = DB.d.voice !== false;
 const G = { p: null, level: 1, stars: 0, unlocked: START };
-function saveProg() { if (G.p) { Object.assign(G.p, { level: G.level, stars: G.stars, unlocked: G.unlocked }); DB.save(); } }
+function saveProg() { if (G.p) { Object.assign(G.p, { level: G.level, stars: G.stars, unlocked: G.unlocked }); DB.save(); if (typeof LB !== 'undefined') LB.soon(G.p); } }
 const challengeReady = () => Math.floor((G.level - 1) / EVERY) > gifts() && !!nextGift();
 const pname = () => G.p ? G.p.name : 'Bé';
 addEventListener('pointerdown', () => AU.init(), true);
@@ -2424,35 +2427,159 @@ function standings() {
     .sort((a, b) => b.s.stars - a.s.stars || b.s.lessons - a.s.lessons || b.s.cars - a.s.cars);
 }
 const rankOf = id => standings().findIndex(x => x.p.id === id) + 1;
-function showRank() {
+/* ── BẢNG XẾP HẠNG CHUNG (nhiều máy) ──
+   Bố mẹ dán "mã gia đình" (NN1|địa chỉ cổng|khóa bí mật) một lần trên mỗi máy; mã chỉ lưu trên máy, không nằm trong file game.
+   Bé nào tạo hồ sơ là tự động có trong bảng chung; game tự gửi điểm (do game tính) sau mỗi bài khi có mạng. */
+const LB = {
+  get cfg() { return DB.d.lbc || null; },
+  parse(code) { const m = String(code || '').trim().match(/^NN1\|(https:\/\/script\.google\.com\/[^|\s]+|http:\/\/127\.0\.0\.1:\d+\/[^|\s]*)\|([A-Za-z0-9]{20,})$/); return m ? { u: m[1], k: m[2] } : null; },
+  call(body, ms = 15000) {
+    const c = this.cfg; if (!c) return Promise.reject(new Error('chưa có mã gia đình'));
+    const ctl = window.AbortController ? new AbortController() : null; const t = setTimeout(() => ctl && ctl.abort(), ms);
+    return fetch(c.u, { method: 'POST', body: JSON.stringify(Object.assign({ key: c.k }, body)), headers: { 'Content-Type': 'text/plain;charset=utf-8' }, signal: ctl && ctl.signal })
+      .then(r => r.json()).finally(() => clearTimeout(t));
+  },
+  ident(p) {   // mã bé + khóa bé: sinh một lần, lưu trong hồ sơ
+    if (!p.lbTok) { const r = () => Math.random().toString(16).slice(2, 10); p.lbTok = r() + r() + r() + r(); DB.save(); }
+    if (!p.lbId) { p.lbId = p.id + '-' + p.lbTok.slice(0, 6); DB.save(); }
+    return { id: p.lbId, tok: p.lbTok };
+  },
+  snap(p) { const s = pStats(p); return { name: p.name, avatar: p.avatar, grade: p.grade || '', stars: s.stars, lessons: s.lessons, perfect: s.perfect, gifts: Math.max(0, s.cars - START) }; },
+  push(p) {
+    if (!this.cfg || !p) return Promise.resolve(null);
+    const kid = Object.assign(this.ident(p), this.snap(p)), sig = JSON.stringify(this.snap(p));
+    if (p.lbSent === sig) return Promise.resolve({ ok: true, same: true });
+    return this.call({ op: 'push', kid }).then(r => { if (r && r.ok) { p.lbSent = sig; DB.save(); } return r; }).catch(() => null);
+  },
+  syncAll() { if (!this.cfg) return; DB.d.players.reduce((pr, p) => pr.then(() => this.push(p)), Promise.resolve()); },
+  soon(p) { clearTimeout(this.t); this.t = setTimeout(() => this.push(p), 2000); },
+};
+// Nhận mã gia đình tự động: (1) mở bằng LINK RIÊNG có #lb=… (máy tính bảng / điện thoại); (2) bộ cài exe có đóng sẵn mã.
+LB.adopt = function (code) {
+  const cfg = this.parse(code); if (!cfg) return false;
+  const c = DB.d.lbc; if (c && c.u === cfg.u && c.k === cfg.k) return true;
+  DB.d.lbc = cfg; DB.d.players.forEach(p => delete p.lbSent); DB.save(); this.syncAll(); return true;
+};
+LB.toast = function (t) {
+  const d = document.createElement('div'); d.textContent = t;
+  d.style.cssText = 'position:fixed;left:50%;top:14px;transform:translateX(-50%);z-index:999;background:#e9fbe1;color:#2f6f18;border:3px solid #6cc24a;border-radius:999px;padding:6px 18px;font:700 18px Mali,sans-serif;box-shadow:0 4px 0 rgba(0,0,0,.15);pointer-events:none;transition:opacity .5s';
+  document.body.appendChild(d); setTimeout(() => { d.style.opacity = '0'; setTimeout(() => d.remove(), 600); }, 4000);
+};
+setTimeout(function () {   // chờ UPD (khai báo phía sau) sẵn sàng
+  const m = location.hash.match(/[#&]lb=([A-Za-z0-9_-]+)/);
+  if (m) {
+    let code = ''; try { code = decodeURIComponent(escape(atob(m[1].replace(/-/g, '+').replace(/_/g, '/')))); } catch (e) { }
+    try { history.replaceState(null, '', location.pathname + location.search); } catch (e) { }   // xóa mã khỏi thanh địa chỉ
+    if (LB.adopt(code)) setTimeout(() => LB.toast('🌏 Đã kết nối bảng xếp hạng chung!'), 800);
+  } else if (!DB.d.lbc) UPD.lb().then(r => { if (r && r.ok && r.code && LB.adopt(r.code)) LB.toast('🌏 Đã kết nối bảng xếp hạng chung!'); });
+}, 0);
+setTimeout(() => LB.syncAll(), 4000);   // mở game: gửi bù điểm của các bé (nếu lần trước mất mạng)
+
+let RANK_TAB = 'local';
+function rankHTML(list, mine) {   // list: [{name, avatar, grade, stars, lessons, perfect, gifts, me}]
+  const medal = ['🥇', '🥈', '🥉'], podCol = ['#ffb627', '#a8b3c7', '#d98a4e'], podH = [96, 70, 52], order = [1, 0, 2];
+  if (!list.length) return '<div class="wtext">Chưa có học sinh nào.</div>';
+  let h = '<div class="podium">' + order.filter(i => list[i]).map(i => {
+    const x = list[i];
+    return `<div class="pod">${avatar(x.avatar)}<b>${esc(x.name)}</b><small>⭐ ${x.stars}</small>
+      <div class="bar" style="height:${podH[i]}px;background:${podCol[i]}">${medal[i]}</div></div>`;
+  }).join('') + '</div>';
+  h += `<table class="rtab"><tr><th>Hạng</th><th style="text-align:left">Học sinh</th><th>🎒 Lớp</th><th>⭐ Sao</th><th>📚 Bài đã học</th><th>🌟 Bài 3 sao</th><th>🎁 Quà</th></tr>`;
+  list.forEach((x, i) => {
+    h += `<tr class="${x.me ? 'me' : ''}"><td>${medal[i] || i + 1}</td><td class="nm">${avatar(x.avatar)}${esc(x.name)}${x.here ? ' <small class="here">🏠</small>' : ''}</td>
+      <td class="gr">${esc((GRADES[x.grade] || {}).n || '')}</td><td>${x.stars}</td><td>${x.lessons}</td><td>${x.perfect}</td><td>${x.gifts}</td></tr>`;
+  });
+  h += '</table>';
+  if (mine) { const r = list.findIndex(x => x.me) + 1; if (r) h += `<div class="rmsg">${r === 1 ? `${esc(G.p.name)} đang đứng đầu! Giỏi quá! 👑` : `${esc(G.p.name)} đang xếp hạng ${r}. Học thêm để vượt lên nhé! 💪`}</div>`; }
+  return h;
+}
+const sortRank = l => l.sort((a, b) => b.stars - a.stars || b.lessons - a.lessons || b.gifts - a.gifts);
+function showRank(tab) {
   if (G.p) saveProg();
-  const list = standings(), me = G.p && G.p.id, medal = ['🥇', '🥈', '🥉'];
-  const podCol = ['#ffb627', '#a8b3c7', '#d98a4e'], podH = [96, 70, 52], order = [1, 0, 2];
-  let h = `<div class="wtitle" style="color:var(--orange)">🏆 Bảng xếp hạng</div>`;
-  if (!list.length) h += '<div class="wtext">Chưa có học sinh nào.</div>';
-  else {
-    h += '<div class="podium">' + order.filter(i => list[i]).map(i => {
-      const { p, s } = list[i];
-      return `<div class="pod">${avatar(p.avatar)}<b>${esc(p.name)}</b><small>⭐ ${s.stars}</small>
-        <div class="bar" style="height:${podH[i]}px;background:${podCol[i]}">${medal[i]}</div></div>`;
-    }).join('') + '</div>';
-    h += `<table class="rtab"><tr><th>Hạng</th><th style="text-align:left">Học sinh</th><th>⭐ Sao</th><th>📚 Bài đã học</th><th>🌟 Bài 3 sao</th><th>🎁 Quà</th></tr>`;
-    list.forEach(({ p, s }, i) => {
-      h += `<tr class="${p.id === me ? 'me' : ''}"><td>${medal[i] || i + 1}</td><td class="nm">${avatar(p.avatar)}${esc(p.name)}</td>
-        <td>${s.stars}</td><td>${s.lessons}</td><td>${s.perfect}</td><td>${Math.max(0, s.cars - START)}</td></tr>`;
-    });
-    h += '</table>';
-    if (me) {
-      const r = rankOf(me);
-      h += `<div class="rmsg">${r === 1 ? `${esc(G.p.name)} đang đứng đầu! Giỏi quá! 👑` : `${esc(G.p.name)} đang xếp hạng ${r}. Học thêm để vượt lên nhé! 💪`}</div>`;
-    }
-  }
-  h += `<button class="btn" id="rOk">👍 Đóng</button>`;
+  if (tab) RANK_TAB = tab;
+  const me = G.p && G.p.id, hasLB = !!LB.cfg;
+  if (!hasLB) RANK_TAB = 'local';
+  let h = `<div class="wtitle" style="color:var(--orange)">🏆 Bảng xếp hạng</div>
+    <div class="rtabs"><button class="mtab ${RANK_TAB === 'local' ? 'on' : ''}" data-t="local">🏠 Trên máy này</button><button class="mtab ${RANK_TAB === 'all' ? 'on' : ''}" data-t="all">🌏 Tất cả các bạn</button></div>
+    <div id="rBody"></div>
+    <div class="updRow" style="margin-top:8px"><button class="btn" id="rOk">👍 Đóng</button><button class="btn gray small" id="rSet">⚙️ Bảng chung</button></div>`;
   $('#rankPanel').innerHTML = h;
-  $('#ovRank').classList.add('on');
+  $('#ovRank').classList.add('on'); $('#rankPanel').scrollTop = 0;
   $('#rOk').onclick = () => { AU.sfx('tap'); $('#ovRank').classList.remove('on'); };
+  $('#rSet').onclick = () => { AU.sfx('tap'); parentGate('Cài đặt bảng xếp hạng chung', showLBSet); };
+  $('#rankPanel').querySelectorAll('.rtabs .mtab').forEach(b => b.onclick = () => {
+    AU.sfx('tap');
+    if (b.dataset.t === 'all' && !LB.cfg) { $('#rBody').innerHTML = '<div class="wtext">🌏 Máy này chưa kết nối bảng xếp hạng chung.<br><small>Bố mẹ bấm <b>⚙️ Bảng chung</b> ở dưới và dán <b>mã gia đình</b> nhé.</small></div>'; return; }
+    showRank(b.dataset.t);
+  });
+  const body = $('#rBody');
+  if (RANK_TAB === 'local') {
+    const list = sortRank(DB.d.players.map(p => Object.assign(LB.snap(p), { me: p.id === me })));
+    body.innerHTML = rankHTML(list, !!me);
+    if (list.length) VOICE.say(`Đứng đầu là ${list[0].name} với ${list[0].stars} sao!`);
+  } else {
+    const mineIds = new Set(DB.d.players.map(p => p.lbId).filter(Boolean)), myId = G.p && G.p.lbId;
+    const draw = (rows, note) => {
+      const list = sortRank(rows.map(r => Object.assign({}, r, { stars: +r.stars || 0, lessons: +r.lessons || 0, perfect: +r.perfect || 0, gifts: +r.gifts || 0, me: r.id === myId, here: mineIds.has(r.id) })));
+      body.innerHTML = (note ? `<div class="updMsg">${note}</div>` : '') + rankHTML(list, !!myId);
+    };
+    const cached = DB.d.lbCache;
+    body.innerHTML = '<div class="updMsg">⏳ Đang tải bảng xếp hạng chung…</div>';
+    (G.p ? LB.push(G.p) : Promise.resolve()).then(() => LB.call({ op: 'list' })).then(r => {
+      if (!r || !r.ok) throw new Error(r && r.err || 'lỗi');
+      DB.d.lbCache = { rows: r.rows, at: Date.now() }; DB.save();
+      if (RANK_TAB === 'all' && $('#rBody') === body) { draw(r.rows); if (r.rows.length) VOICE.say('Bảng xếp hạng của tất cả các bạn!'); }
+    }).catch(e => {
+      if ($('#rBody') !== body) return;
+      if (/mã gia đình/.test(e.message)) return draw([], '🔑 Mã gia đình không đúng. Bố mẹ bấm ⚙️ Bảng chung để nhập lại nhé.');
+      if (cached) draw(cached.rows, `📶 Chưa kết nối được mạng, đang hiện bảng lúc ${new Date(cached.at).toLocaleString('vi-VN')}.`);
+      else body.innerHTML = '<div class="updMsg">📶 Chưa kết nối được mạng. Kiểm tra Wi-Fi rồi thử lại nhé.</div>';
+    });
+  }
   AU.sfx('pop', 4);
-  if (list.length) VOICE.say(`Đứng đầu là ${list[0].p.name} với ${list[0].s.stars} sao!`);
+}
+// Câu hỏi dành cho bố mẹ trước khi vào phần cài đặt (dùng chung giao diện với khóa màn hình)
+function parentGate(title, onOk) {
+  let Q = gateQ(), v = '';
+  $('#lockPanel').innerHTML = `<div class="wtitle" style="color:var(--coral)">👨‍👩‍👧 Dành cho bố mẹ</div>
+    <div class="updMsg" id="lkMsg">${esc(title)}: trả lời đúng để tiếp tục</div>
+    <div class="lkQ" id="lkQ">${Q.q}</div><div class="lkV" id="lkV"></div>
+    <div class="lkPad">${[1, 2, 3, 4, 5, 6, 7, 8, 9, 0].map(d => `<button data-d="${d}">${d}</button>`).join('')}</div>
+    <div class="updRow"><button class="btn gray small" id="lkDel">⌫ Xoá</button><button class="btn small" id="lkGo">✓ Tiếp tục</button><button class="btn grape small" id="lkNo">✕ Thôi</button></div>`;
+  $('#ovLock').classList.add('on');
+  const show = () => { $('#lkV').textContent = v; };
+  $('#lockPanel').querySelectorAll('.lkPad button').forEach(b => b.onclick = () => { AU.sfx('tap'); if (v.length < 5) v += b.dataset.d; show(); });
+  $('#lkDel').onclick = () => { v = v.slice(0, -1); show(); };
+  $('#lkNo').onclick = () => { AU.sfx('tap'); $('#ovLock').classList.remove('on'); };
+  $('#lkGo').onclick = () => {
+    if (v !== '' && +v === Q.a) { AU.sfx('tap'); $('#ovLock').classList.remove('on'); return onOk(); }
+    AU.sfx('wrong'); const box = $('#lkV'); box.classList.remove('bad'); void box.offsetWidth; box.classList.add('bad');
+    Q = gateQ(); v = ''; $('#lkQ').innerHTML = Q.q; show(); $('#lkMsg').textContent = '😺 Chưa đúng rồi, thử câu khác nhé:';
+  };
+}
+function showLBSet() {
+  const c = LB.cfg;
+  $('#infoPanel').innerHTML = `<div class="wtitle" style="color:var(--sky)">🌏 Bảng xếp hạng chung</div>
+    <div class="infoBox">${c ? '✅ Máy này <b>đã kết nối</b> bảng xếp hạng chung.' : '⚪ Máy này <b>chưa kết nối</b>.'}
+      <small>Dán <b>mã gia đình</b> (lấy trong Google Trang tính: menu 🕷️ Nhện Nhí → Lấy mã gia đình). Mã chỉ lưu trên máy này.
+      Các bé tạo hồ sơ trên máy sẽ tự có trong bảng chung.</small></div>
+    <textarea id="lbCode" class="lbCode" placeholder="NN1|https://script.google.com/…|…" autocomplete="off" spellcheck="false"></textarea>
+    <div class="updMsg" id="lbMsg"></div>
+    <div class="updRow"><button class="btn small" id="lbSave">💾 Lưu & kiểm tra</button>${c ? '<button class="btn gray small" id="lbDel">🗑️ Gỡ kết nối</button>' : ''}<button class="btn grape small" id="lbOk">👍 Đóng</button></div>`;
+  $('#ovInfo').classList.add('on');
+  const msg = t => { $('#lbMsg').innerHTML = t; };
+  $('#lbOk').onclick = () => { AU.sfx('tap'); $('#ovInfo').classList.remove('on'); if ($('#ovRank').classList.contains('on')) showRank(); };
+  if (c) $('#lbDel').onclick = () => { if (!confirm('Gỡ kết nối bảng xếp hạng chung trên máy này?')) return; delete DB.d.lbc; DB.save(); showLBSet(); };
+  $('#lbSave').onclick = () => {
+    const cfg = LB.parse($('#lbCode').value);
+    if (!cfg) return msg('😿 Mã chưa đúng. Mã phải bắt đầu bằng <b>NN1|https://script.google.com/</b>. Hãy sao chép lại toàn bộ dòng mã.');
+    const old = DB.d.lbc; DB.d.lbc = cfg; msg('⏳ Đang kiểm tra kết nối…');
+    LB.call({ op: 'list' }).then(r => {
+      if (!r || !r.ok) throw new Error(r && r.err || 'lỗi');
+      DB.d.players.forEach(p => delete p.lbSent); DB.save(); LB.syncAll();
+      msg(`✅ Kết nối thành công! Bảng chung đang có ${r.rows.length} bạn. Các bé trên máy này sẽ được gửi điểm ngay.`); AU.sfx('tada');
+    }).catch(e => { DB.d.lbc = old; DB.save(); msg('😿 Chưa kết nối được: ' + esc(e.message === 'Failed to fetch' ? 'không có mạng hoặc địa chỉ sai' : e.message) + '.'); });
+  };
 }
 $('#rankBtn').onclick = () => { AU.sfx('tap'); showRank(); };
 $('#homeRank').onclick = () => { AU.init(); AU.sfx('tap'); showRank(); };
@@ -2490,6 +2617,7 @@ const UPD = (() => {
     },
     list() { return call('backups'); },
     restore(f) { return call('restore?f=' + encodeURIComponent(f)); },
+    lb() { return api ? call('lb').catch(() => null) : Promise.resolve(null); },   // mã gia đình đóng sẵn trong bộ cài exe
   };
 })();
 // Bộ máy tính bảng: trình duyệt có thể còn giữ bản cũ của địa chỉ gốc (tối đa ~10 phút).
